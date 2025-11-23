@@ -13,8 +13,8 @@
  */
 function cleanText(field) {
   var retstr = field.trim();
-  retstr = retstr.replace(/ +/g," ");
-  retstr = retstr.replace(/\n/g,"<br />");
+  retstr = retstr.replace(/ +/g, " ");
+  retstr = retstr.replace(/\n/g, "<br />");
   return retstr;
 }
 
@@ -24,9 +24,8 @@ function cleanText(field) {
  */
 function formatScale(x) {
   if (x >= "1" && x <= "5") return satisfactionLabels[x];
-  if (x === '') return satisfactionLabels[0];
+  if (x === "") return satisfactionLabels[0];
   return x;
-
 }
 /**
  * formatResponse
@@ -35,23 +34,25 @@ function formatScale(x) {
  * @param resp - the response to format
  * @return "<dl>" with the properties
  */
-function formatResponse(resp) {
+function formatIndividualResponse(resp) {
   var retstr = "";
 
   retstr += " <dl>";
-  retstr += " <b>Entry Number:</b> "+resp.Response;
-  retstr += " <b>Attend Forum:</b> "+formatScale(resp.Attend);
-  retstr += " <b>View online:</b>  "+formatScale(resp.View);
+  retstr += " <b>Entry Number:</b> " + resp.Response;
+  retstr += " <b>Attend Forum:</b> " + formatScale(resp.Attend);
+  retstr += " <b>View online:</b>  " + formatScale(resp.View);
   retstr += " <br />";
-  retstr += " <b>Municipal Tax Value:</b>  "+formatScale(resp.Muni);
-  retstr += " <b>School Tax Value:</b>  "+formatScale(resp.School);
-  retstr += " <b>Overall Tax:</b>  "+formatScale(resp.Taxes);
+  retstr += " <b>Municipal Tax Value:</b>  " + formatScale(resp.Muni);
+  retstr += " <b>School Tax Value:</b>  " + formatScale(resp.School);
+  retstr += " <b>Overall Tax:</b>  " + formatScale(resp.Taxes);
   retstr += " <br />  <br />";
-  retstr += "<dt>Takeaway:</dt>  <dd>"+cleanText(resp.Takeaway) + "</dd>";
-  retstr += "<dt>Like about Lyme:</dt>  <dd>"+cleanText(resp.Like) + "</dd>";
-  retstr += "<dt>Desirable Changes:</dt>  <dd>"+cleanText(resp.Change)+ "</dd>";
-  retstr += "<dt>How address:</dt>  <dd>"+cleanText(resp["How-address"]) + "</dd>";
-  retstr += "<dt>Other thoughts:</dt>  <dd>"+cleanText(resp.Other) + "</dd>";
+  retstr += "<dt>Takeaway:</dt>  <dd>" + cleanText(resp.Takeaway) + "</dd>";
+  retstr += "<dt>Like about Lyme:</dt>  <dd>" + cleanText(resp.Like) + "</dd>";
+  retstr +=
+    "<dt>Desirable Changes:</dt>  <dd>" + cleanText(resp.Change) + "</dd>";
+  retstr +=
+    "<dt>How address:</dt>  <dd>" + cleanText(resp["How-address"]) + "</dd>";
+  retstr += "<dt>Other thoughts:</dt>  <dd>" + cleanText(resp.Other) + "</dd>";
   retstr += "</dl>";
 
   return retstr;
@@ -67,12 +68,16 @@ satisfactionLabels = [
   "Unsatisfied",
   "Neutral",
   "Satisfied",
-  "Very satisfied"
+  "Very satisfied",
 ];
 document.getElementById("ct").innerHTML = responses.length;
 
 var tbody = responses
-  .map(function(x) { return formatResponse(x) })
-  .map(function(x) { return "<tr><td>" + x + "</td></tr>" });
+  .map(function (x) {
+    return formatIndividualResponse(x);
+  })
+  .map(function (x) {
+    return "<tr><td>" + x + "</td></tr>";
+  });
 
 document.getElementById("resps").innerHTML = "<tbody>" + tbody + "</tbody>";

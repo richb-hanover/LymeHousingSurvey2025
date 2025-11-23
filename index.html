@@ -1,186 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Planning Board Housing Survey - November 2025</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/cerulean/bootstrap.min.css "
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    {{/*
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    */}}
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet" />
     <!-- Your custom styles (optional) -->
-    <link href="css/lcdc.css" rel="stylesheet">
-</head>
-<body>
-<div class="container" >
-    <h1>Lyme Housing Survey &mdash; November 2025</h1>
-    <p>
-        Here are results of the survey sent to Lyme residents in March 2019.
-        You can view the charts of data, and scroll through the answers people provided to the survey.
-    </p>
-    <p>
-        The three tabs let you view the survey results as a summary, as the individual responses,
-        or see background information about this project.
-    </p>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <link href="css/lcdc.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lyme Housing Survey &mdash; November 2025</h1>
+      <p>
+        Here are results of the survey sent to Lyme residents in March 2019. You
+        can view the charts of data, and scroll through the answers people
+        provided to the survey.
+      </p>
+      <p>
+        The three tabs let you view the survey results as a summary, as the
+        individual responses, or see background information about this project.
+      </p>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-               aria-selected="true">Summaries</a>
+          <a
+            class="nav-link active"
+            id="home-tab"
+            data-toggle="tab"
+            href="#home"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+            >Summaries</a
+          >
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-               aria-selected="false">Individual Answers</a>
+          <a
+            class="nav-link"
+            id="profile-tab"
+            data-toggle="tab"
+            href="#profile"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+            >Individual Answers</a
+          >
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="profile"
-               aria-selected="false">About this project</a>
+          <a
+            class="nav-link"
+            id="about-tab"
+            data-toggle="tab"
+            href="#about"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+            >About this project</a
+          >
         </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-            <p></p>
-            <div  > <!-- #1 -->
-                <h3 id="q1"></h3>   <!-- Question -->
-                <p><small><i>(<span id="ct1"></span> answers)</i></small></p>
-                <div class="col " >&nbsp;</div>
-                <div class="col-10 ">
-                    <canvas id="r1" style="max-width:500px"  ></canvas> <!-- Responses to Q1  -->
-                </div>
-                <div class="col " >&nbsp;</div>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <p></p>
+          <div>
+            <!-- #1 -->
+            <h3 id="q1"></h3>
+            <!-- Question -->
+            <p>
+              <small
+                ><i>(<span id="ct1"></span> answers)</i></small
+              >
+            </p>
+            <div class="col">&nbsp;</div>
+            <div class="col-10">
+              <canvas id="r1" style="max-width: 500px"></canvas>
+              <!-- Responses to Q1  -->
             </div>
+            <div class="col">&nbsp;</div>
+          </div>
 
-            <div> <!-- #2 -->
-                <h3 id="q2"></h3>   <!-- Question -->
-                <p><small><i>(<span id="ct2"></span> answers)</i></small></p>
-                <div class="col " >&nbsp;</div>
-                <div class="col-10 ">
-                    <canvas id="r2" style="max-width:500px"  ></canvas> <!-- Responses to Q1  -->
-                </div>
-                <div class="col " >&nbsp;</div>
+          <div>
+            <!-- #2 -->
+            <h3 id="q2"></h3>
+            <!-- Question -->
+            <p>
+              <small
+                ><i>(<span id="ct2"></span> answers)</i></small
+              >
+            </p>
+            <div class="col">&nbsp;</div>
+            <div class="col-10">
+              <canvas id="r2" style="max-width: 500px"></canvas>
+              <!-- Responses to Q1  -->
             </div>
+            <div class="col">&nbsp;</div>
+          </div>
 
-            <div> <!-- #3 -->
-                <h3 id="q3"></h3>   <!-- Question -->
-                <p><small><i>(<span id="ct3"></span> answers)</i></small></p>
-                <div class="col" ></div>
-                <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
-                    <table id="r3" class="table table-bordered table-striped mb-0">  </table> <!-- Responses to Q3  -->
-                </div>
-                <div class="col " >&nbsp;</div>
+          <div>
+            <!-- #3 -->
+            <h3 id="q3"></h3>
+            <!-- Question -->
+            <p>
+              <small
+                ><i>(<span id="ct3"></span> answers)</i></small
+              >
+            </p>
+            <div class="col"></div>
+            <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+              <table
+                id="r3"
+                class="table table-bordered table-striped mb-0"
+              ></table>
+              <!-- Responses to Q3  -->
             </div>
+            <div class="col">&nbsp;</div>
+          </div>
 
-            <div >
-                <h3 id="q4"></h3>   <!-- Question -->
-                <p><small><i>(<span id="ct4"></span> answers)</i></small></p>
-                <div class="col" ></div>
-                <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
-                    <table id="r4" class="table table-bordered table-striped mb-0">  </table> <!-- Responses to Q4  -->
-                </div>
-                <div class="col " >&nbsp;</div>
+          <div>
+            <h3 id="q4"></h3>
+            <!-- Question -->
+            <p>
+              <small
+                ><i>(<span id="ct4"></span> answers)</i></small
+              >
+            </p>
+            <div class="col"></div>
+            <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+              <table
+                id="r4"
+                class="table table-bordered table-striped mb-0"
+              ></table>
+              <!-- Responses to Q4  -->
             </div>
+            <div class="col">&nbsp;</div>
+          </div>
 
-            <div>
-                <h3 id="q5"></h3>   <!-- Question -->
-                <p><small><i>(<span id="ct5"></span> answers)</i></small></p>
-                <div class="col" ></div>
-                <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
-                    <table id="r5" class="table table-bordered table-striped mb-0">  </table> <!-- Responses to Q5  -->
-                </div>
-                <div class="col " >&nbsp;</div>
+          <div>
+            <h3 id="q5"></h3>
+            <!-- Question -->
+            <p>
+              <small
+                ><i>(<span id="ct5"></span> answers)</i></small
+              >
+            </p>
+            <div class="col"></div>
+            <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+              <table
+                id="r5"
+                class="table table-bordered table-striped mb-0"
+              ></table>
+              <!-- Responses to Q5  -->
             </div>
+            <div class="col">&nbsp;</div>
+          </div>
 
-            <div  >
-                <h3 id="q6"></h3>   <!-- Question -->
-                <p><small><i>(<span id="ct6"></span> answers)</i></small></p>
-                <div class="col " >&nbsp;</div>
-                <div class="col-10 ">
-                    <canvas id="r6" style="max-width:500px"  ></canvas> <!-- Responses to Q6  -->
-                </div>
-                <div class="col " >&nbsp;</div>
+          <div>
+            <h3 id="q6"></h3>
+            <!-- Question -->
+            <p>
+              <small
+                ><i>(<span id="ct6"></span> answers)</i></small
+              >
+            </p>
+            <div class="col">&nbsp;</div>
+            <div class="col-10">
+              <canvas id="r6" style="max-width: 500px"></canvas>
+              <!-- Responses to Q6  -->
             </div>
+            <div class="col">&nbsp;</div>
+          </div>
 
-            <div  >
-                <h3 id="q7"></h3>   <!-- Question -->
-                <p><small><i>(<span id="ct7"></span> answers)</i></small></p>
-                <div class="col " >&nbsp;</div>
-                <div class="col-10 ">
-                    <canvas id="r7" style="max-width:500px"  ></canvas> <!-- Responses to Q7  -->
-                </div>
-                <div class="col " >&nbsp;</div>
+          <div>
+            <h3 id="q7"></h3>
+            <!-- Question -->
+            <p>
+              <small
+                ><i>(<span id="ct7"></span> answers)</i></small
+              >
+            </p>
+            <div class="col">&nbsp;</div>
+            <div class="col-10">
+              <canvas id="r7" style="max-width: 500px"></canvas>
+              <!-- Responses to Q7  -->
             </div>
+            <div class="col">&nbsp;</div>
+          </div>
 
-            <div  >
-                <h3 id="q8"></h3>   <!-- Question -->
-                <p><small><i>(<span id="ct8"></span> answers)</i></small></p>
-                <div class="col " >&nbsp;</div>
-                <div class="col-10 ">
-                    <canvas id="r8" style="max-width: 500px"  ></canvas> <!-- Responses to Q8  -->
-                </div>
-                <div class="col " >&nbsp;</div>
+          <div>
+            <h3 id="q8"></h3>
+            <!-- Question -->
+            <p>
+              <small
+                ><i>(<span id="ct8"></span> answers)</i></small
+              >
+            </p>
+            <div class="col">&nbsp;</div>
+            <div class="col-10">
+              <canvas id="r8" style="max-width: 500px"></canvas>
+              <!-- Responses to Q8  -->
             </div>
+            <div class="col">&nbsp;</div>
+          </div>
 
-            <div>
-                <h3 id="q9"></h3>   <!-- Question -->
-                <p><small><i>(<span id="ct9"></span> answers)</i></small></p>
-                <div class="col " >&nbsp;</div>
-                <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
-                    <table id="r9" class="table table-bordered table-striped mb-0">  </table> <!-- Responses to Q9  -->
-                </div>
-                <div class="col " >&nbsp;</div>
+          <div>
+            <h3 id="q9"></h3>
+            <!-- Question -->
+            <p>
+              <small
+                ><i>(<span id="ct9"></span> answers)</i></small
+              >
+            </p>
+            <div class="col">&nbsp;</div>
+            <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+              <table
+                id="r9"
+                class="table table-bordered table-striped mb-0"
+              ></table>
+              <!-- Responses to Q9  -->
             </div>
+            <div class="col">&nbsp;</div>
+          </div>
 
-            <div>
-                <h3 id="q10"></h3>
-                <p><small><i>(<span id="ct10"></span> answers)</i></small></p>
-                <div class="col " >&nbsp;</div>
-                <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar" >
-                    <table id="r10" class="table table-bordered table-striped mb-0">  </table> <!-- Responses to Q10 -->
-                </div>
-                <div class="col " >&nbsp;</div>
-            </div></div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <style>
-                b {
-                    font-weight: 700;
-                }
-            </style>
-
-            <p></p>
-            <h1>Individual Responses</h1>
-            <small><i>(<span id="ct"></span> answers)</i></small>
-            <div> <!-- Responses -->
-                <p></p>
-                <div class="col" ></div>
-                <div class="col-11 ">
-                    <table id="resps" class="table table-bordered table-striped mb-0">  </table> <!-- Responses to Q3  -->
-                </div>
+          <div>
+            <h3 id="q10"></h3>
+            <p>
+              <small
+                ><i>(<span id="ct10"></span> answers)</i></small
+              >
+            </p>
+            <div class="col">&nbsp;</div>
+            <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+              <table
+                id="r10"
+                class="table table-bordered table-striped mb-0"
+              ></table>
+              <!-- Responses to Q10 -->
             </div>
-
+            <div class="col">&nbsp;</div>
+          </div>
         </div>
-        <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
-            <p></p>
-            <div class="bootmark" data-src="./README.md">
-            </div>
-        </div>
+        <div
+          class="tab-pane fade"
+          id="profile"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          <style>
+            b {
+              font-weight: 700;
+            }
+          </style>
 
+          <p></p>
+          <h1>Individual Responses</h1>
+          <small
+            ><i>(<span id="ct"></span> answers)</i></small
+          >
+          <div>
+            <!-- Responses -->
+            <p></p>
+            <div class="col"></div>
+            <div class="col-11">
+              <table
+                id="resps"
+                class="table table-bordered table-striped mb-0"
+              ></table>
+              <!-- Responses to Q3  -->
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade show active"
+          id="about"
+          role="tabpanel"
+          aria-labelledby="about-tab"
+        >
+          <p></p>
+          <div class="bootmark" data-src="./README.md"></div>
+        </div>
+      </div>
     </div>
-
-  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- JQuery -->
+    {{/*
     <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    */}}
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <!--    <script type="text/javascript" src="js/bootstrap.js"></script>-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    {{/*
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    */}}
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript" src="LCDC-feedback.json"></script>
@@ -188,12 +350,11 @@
     <script src="https://unpkg.com/bootmark@latest/dist/bootmark.bundle.min.js"></script>
     <script>
       $.fn.bootmark.options.html = {
-        theme: 'quartz',
+        theme: "quartz",
         toc: false,
-        credit: false
+        credit: false,
       };
     </script>
-    <script src="js/index.js"> </script>
-
-</body>
+    <script src="js/index.js"></script>
+  </body>
 </html>

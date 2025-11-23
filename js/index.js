@@ -10,7 +10,7 @@
  *  from the array.
  */
 function tablerow(accum, x) {
-  return accum + "<tr><td>" + x + "</td></tr>\n"
+  return accum + "<tr><td>" + x + "</td></tr>\n";
 }
 
 /**
@@ -19,15 +19,27 @@ function tablerow(accum, x) {
  */
 function tableize(ary, prop, qID) {
   var theResps = ary
-    .map(function(x) { return { resp: x[prop] , item: x.Response}  } )   // return an object with the requested prop and its Response #
-    .map(function(x) { return Object.assign(x, { resp: x.resp.trim()} ) } )  // remove leading & trailing whitespace from the requested prop
-    .filter(function(x) { return  /\S/.test(x.resp) } )             // filter out empty strings
-    .map(function(x) { /* console.log(x.resp); */ return Object.assign(x, {resp: x.resp.replace(/\n/g,"<br />")}) } )   // substitute \n with <br />
-    .map(function(x) { return x.resp + " <i>(Answer #" + x.item + ")</i>"}); // append the response # in paren's
-  document.getElementById("ct"+qID).innerHTML = theResps.length;
+    .map(function (x) {
+      return { resp: x[prop], item: x.Response };
+    }) // return an object with the requested prop and its Response #
+    .map(function (x) {
+      return Object.assign(x, { resp: x.resp.trim() });
+    }) // remove leading & trailing whitespace from the requested prop
+    .filter(function (x) {
+      return /\S/.test(x.resp);
+    }) // filter out empty strings
+    .map(function (x) {
+      /* console.log(x.resp); */ return Object.assign(x, {
+        resp: x.resp.replace(/\n/g, "<br />"),
+      });
+    }) // substitute \n with <br />
+    .map(function (x) {
+      return x.resp + " <i>(Answer #" + x.item + ")</i>";
+    }); // append the response # in paren's
+  document.getElementById("ct" + qID).innerHTML = theResps.length;
 
-  var theDom = theResps.reduce(tablerow,"");
-  document.getElementById("r"+qID).innerHTML = theDom;
+  var theDom = theResps.reduce(tablerow, "");
+  document.getElementById("r" + qID).innerHTML = theDom;
 }
 
 /**
@@ -51,14 +63,32 @@ function countResponses(accum, x) {
  * Return an object with the total number of each kind of response
  */
 function summarizeResponses(ary, prop, labels) {
-
   var zeroAry = {};
-  labels.forEach(function(x) { zeroAry[x] = 0 });
+  labels.forEach(function (x) {
+    zeroAry[x] = 0;
+  });
   var retary = ary
-    .map(function(x) { return x[prop] } )
-    .map(function(x) { if (x >= "1" && x <= "5") { x = labels[x] } return x; } )
-    .map(function(x) { if (x === '') { x = "N/A"; } return x; } )      // Fix up empty string
-    .map(function(x) { if (x === null) { x = "N/A"; }  return x; } )  // Fix up "null"
+    .map(function (x) {
+      return x[prop];
+    })
+    .map(function (x) {
+      if (x >= "1" && x <= "5") {
+        x = labels[x];
+      }
+      return x;
+    })
+    .map(function (x) {
+      if (x === "") {
+        x = "N/A";
+      }
+      return x;
+    }) // Fix up empty string
+    .map(function (x) {
+      if (x === null) {
+        x = "N/A";
+      }
+      return x;
+    }) // Fix up "null"
     .reduce(countResponses, zeroAry);
 
   return retary;
@@ -71,43 +101,48 @@ function summarizeResponses(ary, prop, labels) {
  * @param textLabels
  * @param qID
  */
-function pieChart (ary, prop, textLabels, qID ) {
+function pieChart(ary, prop, textLabels, qID) {
   //pie
-  var ctxP = document.getElementById("r"+qID).getContext('2d');
+  var ctxP = document.getElementById("r" + qID).getContext("2d");
   var resps = summarizeResponses(ary, prop, textLabels);
   var labels = Object.keys(resps);
   var data = [];
   var count = 0;
-  labels.forEach(function(x) { data.push(resps[x]); count+= resps[x] });
-  document.getElementById("ct"+qID).innerHTML = count;
+  labels.forEach(function (x) {
+    data.push(resps[x]);
+    count += resps[x];
+  });
+  document.getElementById("ct" + qID).innerHTML = count;
 
   var myPieChart = new Chart(ctxP, {
-    type: 'pie',
+    type: "pie",
     data: {
       labels: labels,
-      datasets: [{
-        data: data,
-        // backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-        backgroundColor: [
-          'rgba(54, 162, 235, 0.2)', // blue
-          'rgba(75, 192, 192, 0.2)', // green
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-        ],
-        hoverBackgroundColor: [
-          'rgba(54, 162, 235, 1)', // blue
-          'rgba(75, 192, 192, 1)', // green
-          'rgba(255,99,132,1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)'
-        ]
-      }]
+      datasets: [
+        {
+          data: data,
+          // backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+          backgroundColor: [
+            "rgba(54, 162, 235, 0.2)", // blue
+            "rgba(75, 192, 192, 0.2)", // green
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(153, 102, 255, 0.2)",
+          ],
+          hoverBackgroundColor: [
+            "rgba(54, 162, 235, 1)", // blue
+            "rgba(75, 192, 192, 1)", // green
+            "rgba(255,99,132,1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(153, 102, 255, 1)",
+            "rgba(255, 159, 64, 1)",
+          ],
+        },
+      ],
     },
     options: {
-      responsive: true
-    }
+      responsive: true,
+    },
   });
 }
 /**
@@ -118,53 +153,59 @@ function pieChart (ary, prop, textLabels, qID ) {
  * @param qID
  * @param label
  */
-function barChart (ary, prop, textLabels, qID, label) {
-  var ctx = document.getElementById("r"+qID).getContext('2d');
+function barChart(ary, prop, textLabels, qID, label) {
+  var ctx = document.getElementById("r" + qID).getContext("2d");
   var resps = summarizeResponses(ary, prop, textLabels);
 
   var labels = Object.keys(resps);
   var data = [];
   var count = 0;
-  labels.forEach(function(x) { data.push(resps[x]); count+= resps[x] });
-  document.getElementById("ct"+qID).innerHTML = count;
+  labels.forEach(function (x) {
+    data.push(resps[x]);
+    count += resps[x];
+  });
+  document.getElementById("ct" + qID).innerHTML = count;
 
   var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: "bar",
     data: {
       labels: labels,
-      datasets: [{
-        label: "",
-        data: data,
-        backgroundColor: [
-          'rgba(54, 162, 235, 0.2)', // blue
-          'rgba(75, 192, 192, 0.2)', // green
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)'
-        ],
-        borderColor: [
-          'rgba(54, 162, 235, 1)', // blue
-          'rgba(75, 192, 192, 1)', // green
-          'rgba(255,99,132,1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)'
-        ],
-        borderWidth: 1
-      }]
+      datasets: [
+        {
+          label: "",
+          data: data,
+          backgroundColor: [
+            "rgba(54, 162, 235, 0.2)", // blue
+            "rgba(75, 192, 192, 0.2)", // green
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(153, 102, 255, 0.2)",
+            "rgba(255, 159, 64, 0.2)",
+          ],
+          borderColor: [
+            "rgba(54, 162, 235, 1)", // blue
+            "rgba(75, 192, 192, 1)", // green
+            "rgba(255,99,132,1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(153, 102, 255, 1)",
+            "rgba(255, 159, 64, 1)",
+          ],
+          borderWidth: 1,
+        },
+      ],
     },
     options: {
       scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      }
-    }
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
   });
-
 }
 
 /**
@@ -172,16 +213,46 @@ function barChart (ary, prop, textLabels, qID, label) {
  */
 
 // copy the questions array to the respective <h3>'s
-for (i=1; i<=10; i++) {
-  id = "q"+i;
+for (i = 1; i <= 10; i++) {
+  id = "q" + i;
   document.getElementById(id).innerHTML = questions[i];
 }
 
-pieChart(responses, "Attend",["Yes", "No"], "1" );
-pieChart(responses, "View",  ["Yes", "No"], "2");
-barChart(responses, "Muni",  ["N/A","Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"], "6" );
-barChart(responses, "School",["N/A","Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"], "7");
-barChart(responses, "Taxes", ["N/A", "Too low","About right", "Too high"], "8", "Taxes");
+pieChart(responses, "Attend", ["Yes", "No"], "1");
+pieChart(responses, "View", ["Yes", "No"], "2");
+barChart(
+  responses,
+  "Muni",
+  [
+    "N/A",
+    "Very unsatisfied",
+    "Unsatisfied",
+    "Neutral",
+    "Satisfied",
+    "Very Satisfied",
+  ],
+  "6"
+);
+barChart(
+  responses,
+  "School",
+  [
+    "N/A",
+    "Very unsatisfied",
+    "Unsatisfied",
+    "Neutral",
+    "Satisfied",
+    "Very Satisfied",
+  ],
+  "7"
+);
+barChart(
+  responses,
+  "Taxes",
+  ["N/A", "Too low", "About right", "Too high"],
+  "8",
+  "Taxes"
+);
 
 tableize(responses, "Takeaway", "3");
 tableize(responses, "Like", "4");
@@ -199,16 +270,19 @@ satisfactionLabels = [
   "Unsatisfied",
   "Neutral",
   "Satisfied",
-  "Very satisfied"
+  "Very satisfied",
 ];
 document.getElementById("ct").innerHTML = responses.length;
 
 var tbody = responses
-  .map(function(x) { return formatResponse(x) })
-  .map(function(x) { return "<tr><td>" + x + "</td></tr>" });
+  .map(function (x) {
+    return formatIndividualResponse(x);
+  })
+  .map(function (x) {
+    return "<tr><td>" + x + "</td></tr>";
+  });
 
 document.getElementById("resps").innerHTML = "<tbody>" + tbody + "</tbody>";
-
 
 /* ===== responses.js ===== */
 
@@ -227,8 +301,8 @@ document.getElementById("resps").innerHTML = "<tbody>" + tbody + "</tbody>";
  */
 function cleanText(field) {
   var retstr = field.trim();
-  retstr = retstr.replace(/ +/g," ");
-  retstr = retstr.replace(/\n/g,"<br />");
+  retstr = retstr.replace(/ +/g, " ");
+  retstr = retstr.replace(/\n/g, "<br />");
   return retstr;
 }
 
@@ -238,9 +312,8 @@ function cleanText(field) {
  */
 function formatScale(x) {
   if (x >= "1" && x <= "5") return satisfactionLabels[x];
-  if (x === '') return satisfactionLabels[0];
+  if (x === "") return satisfactionLabels[0];
   return x;
-
 }
 /**
  * formatResponse
@@ -249,23 +322,25 @@ function formatScale(x) {
  * @param resp - the response to format
  * @return "<dl>" with the properties
  */
-function formatResponse(resp) {
+function formatIndividualResponse(resp) {
   var retstr = "";
 
   retstr += " <dl>";
-  retstr += " <b>Answer Number:</b> "+resp.Response;
-  retstr += " <b>Attend Forum:</b> "+formatScale(resp.Attend);
-  retstr += " <b>View online:</b>  "+formatScale(resp.View);
+  retstr += " <b>Answer Number:</b> " + resp.Response;
+  retstr += " <b>Attend Forum:</b> " + formatScale(resp.Attend);
+  retstr += " <b>View online:</b>  " + formatScale(resp.View);
   retstr += " <br />";
-  retstr += " <b>Municipal Tax Value:</b>  "+formatScale(resp.Muni);
-  retstr += " <b>School Tax Value:</b>  "+formatScale(resp.School);
-  retstr += " <b>Overall Tax:</b>  "+formatScale(resp.Taxes);
+  retstr += " <b>Municipal Tax Value:</b>  " + formatScale(resp.Muni);
+  retstr += " <b>School Tax Value:</b>  " + formatScale(resp.School);
+  retstr += " <b>Overall Tax:</b>  " + formatScale(resp.Taxes);
   retstr += " <br />  <br />";
-  retstr += "<dt>Takeaway:</dt>  <dd>"+cleanText(resp.Takeaway) + "</dd>";
-  retstr += "<dt>Like about Lyme:</dt>  <dd>"+cleanText(resp.Like) + "</dd>";
-  retstr += "<dt>Desirable Changes:</dt>  <dd>"+cleanText(resp.Change)+ "</dd>";
-  retstr += "<dt>How address:</dt>  <dd>"+cleanText(resp["How-address"]) + "</dd>";
-  retstr += "<dt>Other thoughts:</dt>  <dd>"+cleanText(resp.Other) + "</dd>";
+  retstr += "<dt>Takeaway:</dt>  <dd>" + cleanText(resp.Takeaway) + "</dd>";
+  retstr += "<dt>Like about Lyme:</dt>  <dd>" + cleanText(resp.Like) + "</dd>";
+  retstr +=
+    "<dt>Desirable Changes:</dt>  <dd>" + cleanText(resp.Change) + "</dd>";
+  retstr +=
+    "<dt>How address:</dt>  <dd>" + cleanText(resp["How-address"]) + "</dd>";
+  retstr += "<dt>Other thoughts:</dt>  <dd>" + cleanText(resp.Other) + "</dd>";
   retstr += "</dl>";
 
   return retstr;
@@ -281,12 +356,16 @@ satisfactionLabels = [
   "Unsatisfied",
   "Neutral",
   "Satisfied",
-  "Very satisfied"
+  "Very satisfied",
 ];
 document.getElementById("ct").innerHTML = responses.length;
 
 var tbody = responses
-  .map(function(x) { return formatResponse(x) })
-  .map(function(x) { return "<tr><td>" + x + "</td></tr>" });
+  .map(function (x) {
+    return formatIndividualResponse(x);
+  })
+  .map(function (x) {
+    return "<tr><td>" + x + "</td></tr>";
+  });
 
 document.getElementById("resps").innerHTML = "<tbody>" + tbody + "</tbody>";
