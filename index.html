@@ -37,7 +37,7 @@
     <div class="container">
       <h1>Lyme Housing Survey &mdash; November 2025</h1>
       <p>
-        Here are results of the survey sent to Lyme residents in March 2019. You
+        Here are results of the survey sent to Lyme residents *** FIX ME***. You
         can view the charts of data, and scroll through the answers people
         provided to the survey.
       </p>
@@ -166,7 +166,7 @@
 
           <div>
             <h3 id="q5"></h3>
-            <!-- Question -->
+            <!-- Question 5 -->
             <p>
               <small
                 ><i>(<span id="ct5"></span> answers)</i></small
@@ -267,7 +267,6 @@
             </div>
             <div class="col">&nbsp;</div>
           </div>
-          <p><b>End of Summaries:</b></p>
         </div>
         <!-- Start of "Individual" tab -->
         <div
@@ -332,12 +331,13 @@
     />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <!-- MDBootstrap 4.4.5 -->
+    <!-- MDBootstrap 4.4.5 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js"></script>
+    -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- -->
     <script type="module">
@@ -355,9 +355,12 @@
       load();
     </script>
 
-    <script type="text/javascript" src="LCDC-feedback.js"></script>
+    <script type="text/javascript" src="Survey-feedback.js"></script>
     <script type="text/javascript" src="LCDC-questions.js"></script>
 
-    <script src="js/index.js"></script>
+    <!-- Chart.js (global Chart for modules) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>

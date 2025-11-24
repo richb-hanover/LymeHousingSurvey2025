@@ -1,7 +1,8 @@
 {
-  "name": "lcdc-survey-results",
-  "version": "1.0.0",
+  "name": "lyme-housing-survey-2025",
+  "version": "0.1.0",
   "description": "",
+  "type": "module",
   "main": "js/index.js",
   "scripts": {
     "start": "run-script-os",
@@ -17,6 +18,7 @@
     "run-script-os": "^1.1.6"
   },
   "dependencies": {
+    "chart.js": "^4.5.1",
     "marked": "^17.0.1",
     "postcss": "^8.5.6",
     "xmlhttprequest-ssl": "^4.0.0"
