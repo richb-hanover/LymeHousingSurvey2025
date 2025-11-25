@@ -3,22 +3,21 @@
   "version": "0.1.0",
   "description": "",
   "type": "module",
-  "main": "js/index.js",
+  "main": "src/main.js",
   "scripts": {
-    "start": "run-script-os",
-    "start:win32": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
-    "//": "Hello! If you are having trouble running this command. Try changing Firefox Developer Edition to FirefoxDeveloperEdition",
-    "start:darwin:linux": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser 'Firefox Developer Edition'"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "Rich Brown <richb.hanover@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^3.0.4",
     "cssnano": "^7.1.2",
-    "run-script-os": "^1.1.6"
+    "vite": "^5.2.0"
   },
   "dependencies": {
     "chart.js": "^4.5.1",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "marked": "^17.0.1",
     "postcss": "^8.5.6",
     "xmlhttprequest-ssl": "^4.0.0"

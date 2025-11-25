@@ -1,4 +1,4 @@
-responses = [
+export const responses = [
   {
     Timestamp: "2025/11/06 2:45:30 PM EST",
     Response: 1,

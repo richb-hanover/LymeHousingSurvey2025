@@ -2,19 +2,17 @@
  * Javascript for the LCDC Questionnaire summary page
  * April 2019 - reb
  */
+import Chart from "chart.js/auto";
 import {
-  tablerow,
   tableize,
-  countResponses,
-  summarizeResponses,
   pieChart,
   barChart,
-  cleanText,
-  formatScale,
   formatIndividualResponse,
   summarizeResponseArray,
 } from "./utils.js";
 import { makeChart } from "./chartjs-utils.js";
+import { responses } from "./data/responses.js";
+import { questions } from "./data/questions.js";
 
 /**
  * Beginning of main routine
@@ -78,15 +76,6 @@ tableize(responses, "Other", "10");
 /**
  * Beginning of main routine for the individual responses
  */
-
-let satisfactionLabels = [
-  "<i>No entry</i>",
-  "Very unsatisfied",
-  "Unsatisfied",
-  "Neutral",
-  "Satisfied",
-  "Very satisfied",
-];
 document.getElementById("ct").innerHTML = responses.length;
 
 var tbody = responses

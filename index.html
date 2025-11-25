@@ -113,8 +113,8 @@
 
     <!-- JavaScript - supplied by ChatGPT for things that work with Bootstrap 4 & MDBootstrap -->
 
-    <script src="./js/jquery-3.4.0.min.js"></script>
-    <script src="./js/popper.min.js"></script>
+    <script src="./vendor/jquery-3.4.0.min.js"></script>
+    <script src="./vendor/popper.min.js"></script>
     <!-- Bootstrap 4 -->
     <link
       rel="stylesheet"
@@ -130,62 +130,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js"></script>
     -->
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script type="text/javascript" src="Survey-feedback.js"></script>
-    <script type="text/javascript" src="Survey-questions.js"></script>
-    <script>
-      Chart.register(ChartDataLabels);
-    </script>
-
-    <script type="module">
-      async function loadTabPartials() {
-        const containers = Array.from(
-          document.querySelectorAll("[data-partial]")
-        );
-        const loaders = containers.map(async (container) => {
-          const path = container.getAttribute("data-partial");
-          if (!path) {
-            return;
-          }
-          const resp = await fetch(path);
-          if (!resp.ok) {
-            throw new Error(`Failed to load ${path} (${resp.status})`);
-          }
-          container.innerHTML = await resp.text();
-        });
-        await Promise.all(loaders);
-      }
-
-      async function loadReadme() {
-        const target = document.getElementById("readme-content");
-        if (!target) {
-          return;
-        }
-        try {
-          const resp = await fetch("./README.md");
-          if (!resp.ok) {
-            throw new Error(`Failed to load README (${resp.status})`);
-          }
-          const md = await resp.text();
-          target.innerHTML = marked.parse(md);
-        } catch (err) {
-          console.error("Crikey! Failed to load README", err);
-        }
-      }
-
-      async function init() {
-        try {
-          await loadTabPartials();
-          await loadReadme();
-          await import("./js/index.js");
-        } catch (err) {
-          console.error("Initialization error", err);
-        }
-      }
-
-      init();
-    </script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

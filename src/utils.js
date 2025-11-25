@@ -1,3 +1,14 @@
+import Chart from "chart.js/auto";
+
+export const satisfactionLabels = [
+  "<i>No entry</i>",
+  "Very unsatisfied",
+  "Unsatisfied",
+  "Neutral",
+  "Satisfied",
+  "Very satisfied",
+];
+
 /**
  * Javascript for the LCDC Questionnaire summary page
  * Separating out utility functions

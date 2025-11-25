@@ -52,7 +52,7 @@ Also create _Survey-questions.json_ with "printable" questions
    ```
 
 The web page page scripts read data from the
-_Survey-feedback.js_ and _Survey-questions.js_ files,
+`src/data/responses.js` and `src/data/questions.js` modules,
 and format the data using
 a touch of Javascript and CSS.
 
@@ -66,16 +66,17 @@ The Summaries tab collates information from each of the questions.
 The repository for these files is at: [https://github.com/richb-hanover/PB\_Housing\_Survey-November2025](https://github.com/richb-hanover/PB\_Housing\_Survey-November2025)
 It contains the original data, as well test procedures for the Javascript and CSS files. 
 
-Run the `yarn` command below, then edit any `*.js`, `*.html`, and `*.css` file and the page will automatically reload in Firefox Developer Browser.
-Setup files copied from Wes Bos' CSS-Grid course at 
-[https://github.com/wesbos/css-grid](https://github.com/wesbos/css-grid)
+Install dependencies once, then use Vite's dev server for automatic reloading:
 
-Run `yarn update --latest` to update to the latest versions of all the dependencies.
+```sh
+npm install
+npm run dev   # start the Vite dev server on localhost:5173
+```
 
-``` sh
-yarn install # to get started
+To create a production build:
 
-yarn start # to start monitoring the files in the folder.
+```sh
+npm run build
 ```
 
 ---
@@ -90,4 +91,3 @@ yarn start # to start monitoring the files in the folder.
  ```
  Timestamp	Response	1. Rate of increase	2. Duplexes	2. 3-6 units	2. 7 to 15 units	3. Attainable	3. Affordable	4. Att-Aff Explanation	5. Lyme Common	5. Lyme Center	5. Commercial	5. Rural	5. East Lyme	5. Holts Ledge	5. Mtn & Forest	5. Wherever SF units	5. Nowhere	5. Other	6. Other explanation	7. Housing in Commercial	8. Multi-unit districs	9. Infill	10. Lyme School	11. Lyme School Explanation	12. Housing initiatives	13. Years in Lyme	14. Plan to move	15. Explanation of moving 	16. Age range	17. Smaller house	18. Smaller house explanation	19. Currently own	20. Other thoughts
  ```
-

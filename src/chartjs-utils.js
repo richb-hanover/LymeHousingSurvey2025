@@ -1,8 +1,7 @@
-/**
- * Switching to use chart.js directly instead of mdbootstrap
- */
+import Chart from "chart.js/auto";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 
-// Chart is loaded globally from the CDN in index.html
+Chart.register(ChartDataLabels);
 
 // A stable 12-color palette (visually distinct, color-blind-friendly)
 const CHART_COLORS = [
@@ -38,10 +37,10 @@ export function makeChart(id, type, labels, data, title) {
   new Chart(canvas, {
     type,
     data: {
-      sortedLabels,
+      labels: sortedLabels,
       datasets: [
         {
-          sortedData,
+          data: sortedData,
           backgroundColor: CHART_COLORS.slice(0, sortedLabels.length),
         },
       ],

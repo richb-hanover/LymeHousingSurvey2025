@@ -1,4 +1,4 @@
-questions = [
+export const questions = [
   "Timestamp",
   "How do you feel about the recommended rate of growth?",
   "Were you able to view the video of the presentation on-line?",
