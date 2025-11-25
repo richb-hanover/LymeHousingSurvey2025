@@ -24,10 +24,9 @@ Each paper form was numbered, and those numbers were entered manually as the fir
 
 The data was exported as CSV from Google, then massaged to:
 
-1. (If needed) Add a header row to give each of the columns a name.
-   Format first row to remove wrap.
-2. Add a second column (becomes Column B) with "Response" in line 1 and numbering each of the rows incrementally
-3. For the manually-entered rows, remove the [###] from the final question.
+1. Add a column (becomes Column B) to hold the response number. Add "1" in the first row, and numbering each of the rows incrementally
+2. Use _src/data/headings.txt_ to replace the headings in the first line of the CSV file
+3. For the manually-entered data, remove the [###] from the final question.
 4. Synchronize the response numbers? (No - just start the paper versions at the next one after the final electronic entry)
 5. Convert the CSV to JSON using [http://www.convertcsv.com/csv-to-json.htm](http://www.convertcsv.com/csv-to-json.htm)
   - Select file to upload (copy/paste or use upload)
@@ -38,8 +37,7 @@ The data was exported as CSV from Google, then massaged to:
 6. Add `responses = ` and a final `;`
    to convert to a valid Javascript statement
 
-Also create _Survey-questions.json_ with "printable" questions
-  (a summary of the question for display)
+Also create _Survey-questions.json_ with "printable" questions to be displayed for each response.
   It should have the form of a JSON array of strings:
 
    ```
@@ -87,7 +85,5 @@ npm run build
 - `yarn start` appears to correctly display old (LCDC) data
 - Created _Survey-feedback.json_ from housing results (with "Response" column.
 - Switch back to _LCDC-feedback.json_ and switch files to Typescript (.ts suffix); add "type: module" to package.json
- 
- ```
- Timestamp	Response	1. Rate of increase	2. Duplexes	2. 3-6 units	2. 7 to 15 units	3. Attainable	3. Affordable	4. Att-Aff Explanation	5. Lyme Common	5. Lyme Center	5. Commercial	5. Rural	5. East Lyme	5. Holts Ledge	5. Mtn & Forest	5. Wherever SF units	5. Nowhere	5. Other	6. Other explanation	7. Housing in Commercial	8. Multi-unit districs	9. Infill	10. Lyme School	11. Lyme School Explanation	12. Housing initiatives	13. Years in Lyme	14. Plan to move	15. Explanation of moving 	16. Age range	17. Smaller house	18. Smaller house explanation	19. Currently own	20. Other thoughts
- ```
+- Switch to using Chart.js directly (not MDBootstrap)
+- Switch to using Vite.js 

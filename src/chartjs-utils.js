@@ -27,12 +27,12 @@ export function makeChart(id, type, labels, data, title) {
   if (!canvas) {
     throw new Error(`Chart container "${id}" not found`);
   }
-  // const { labels: sortedLabels, data: sortedData } = sortLabelsAndData(
-  //   labels,
-  //   data
-  // );
-  const sortedLabels = labels;
-  const sortedData = data;
+  const { labels: sortedLabels, data: sortedData } = sortLabelsAndData(
+    labels,
+    data
+  );
+  // const sortedLabels = labels;
+  // const sortedData = data;
 
   new Chart(canvas, {
     type,
