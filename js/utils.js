@@ -24,7 +24,7 @@ export function tablerow(accum, x) {
  * @returns void
  */
 export function tableize(ary, prop, qID) {
-  console.log(`tableize: ${JSON.stringify(ary)} ${ary.length}`);
+  // console.log(`tableize: ${JSON.stringify(ary)} ${ary.length}`);
   let theDom = "";
 
   // check for missing prop
@@ -285,33 +285,6 @@ export function barChart(ary, prop, textLabels, qID, label) {
   });
 }
 
-// satisfactionLabels = [
-//   "<i>No entry</i>",
-//   "Very unsatisfied",
-//   "Unsatisfied",
-//   "Neutral",
-//   "Satisfied",
-//   "Very satisfied",
-// ];
-// document.getElementById("ct").innerHTML = responses.length;
-
-// var tbody = responses
-//   .map(function (x) {
-//     return formatIndividualResponse(x);
-//   })
-//   .map(function (x) {
-//     return "<tr><td>" + x + "</td></tr>";
-//   });
-
-// document.getElementById("resps").innerHTML = "<tbody>" + tbody + "</tbody>";
-
-/* ===== responses.js ===== */
-
-/**
- * Javascript for the LCDC Questionnaire summary page
- * April 2019 - reb
- */
-
 /**
  * cleanText - given a text field, clean it up by"
  * - removing leading/trailing whitespace
@@ -367,27 +340,3 @@ export function formatIndividualResponse(resp) {
 
   return retstr;
 }
-
-// /**
-//  * Beginning of main routine
-//  */
-
-// satisfactionLabels = [
-//   "<i>No entry</i>",
-//   "Very unsatisfied",
-//   "Unsatisfied",
-//   "Neutral",
-//   "Satisfied",
-//   "Very satisfied",
-// ];
-// document.getElementById("ct").innerHTML = responses.length;
-
-// var tbody = responses
-//   .map(function (x) {
-//     return formatIndividualResponse(x);
-//   })
-//   .map(function (x) {
-//     return "<tr><td>" + x + "</td></tr>";
-//   });
-
-// document.getElementById("resps").innerHTML = "<tbody>" + tbody + "</tbody>";

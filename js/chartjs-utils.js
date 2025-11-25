@@ -23,15 +23,26 @@ const CHART_COLORS = [
 // one-time initialization of the "%" labels (pie charts)
 // Chart.register(ChartDataLabels);
 
-export function makeChart(id, type, labels, data) {
-  new Chart(document.getElementById(id), {
+export function makeChart(id, type, labels, data, title) {
+  const canvas = document.getElementById(id);
+  if (!canvas) {
+    throw new Error(`Chart container "${id}" not found`);
+  }
+  // const { labels: sortedLabels, data: sortedData } = sortLabelsAndData(
+  //   labels,
+  //   data
+  // );
+  const sortedLabels = labels;
+  const sortedData = data;
+
+  new Chart(canvas, {
     type,
     data: {
-      labels,
+      sortedLabels,
       datasets: [
         {
-          data,
-          backgroundColor: CHART_COLORS.slice(0, labels.length),
+          sortedData,
+          backgroundColor: CHART_COLORS.slice(0, sortedLabels.length),
         },
       ],
     },
@@ -40,7 +51,7 @@ export function makeChart(id, type, labels, data) {
       plugins: {
         title: {
           display: true,
-          text: "Your Chart Title",
+          text: title,
           align: "center", // optional, default is center
           font: { size: 18, weight: "bold" },
           padding: 10,
@@ -71,9 +82,16 @@ export function makeChart(id, type, labels, data) {
     },
   });
 }
-
-function randomColor() {
-  return `hsl(${Math.random() * 360}, 70%, 60%)`;
+function sortLabelsAndData(labels, data) {
+  return labels
+    .map((label, i) => ({ label, value: data[i] }))
+    .sort((a, b) => a.label.localeCompare(b.label))
+    .reduce(
+      (acc, item) => {
+        acc.labels.push(item.label);
+        acc.data.push(item.value);
+        return acc;
+      },
+      { labels: [], data: [] }
+    );
 }
-
-// makeChart("chart1", "pie", ["Yes", "No"], [20, 80]);
