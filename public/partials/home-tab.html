@@ -46,6 +46,23 @@
     width: 100% !important;
     height: 100% !important;
   }
+
+  .table-wrapper-scroll-y {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .table-wrapper-scroll-y table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .table-wrapper-scroll-y td {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
 </style>
 
 <!-- Q1 -->
@@ -54,7 +71,7 @@
   <h3 id="q1"></h3>
   <p>
     <small
-      ><i>(<span id="ct1"></span> answers)</i></small
+      ><i>(<span id="ct1"></span> responses)</i></small
     >
   </p>
 
@@ -75,7 +92,7 @@
   <!-- Question -->
   <p>
     <small
-      ><i>(<span id="ct2"></span> answers)</i></small
+      ><i>(<span id="ct2"></span> responses)</i></small
     >
   </p>
   <div class="survey-block__charts">
@@ -105,12 +122,11 @@
 
 <!-- Q3 -->
 <div>
-  <!-- Original #3 -->
   <h3 id="q3"></h3>
   <!-- Question -->
   <p>
     <small
-      ><i>(<span id="ct3"></span> answers)</i></small
+      ><i>(<span id="ct3"></span> responses)</i></small
     >
   </p>
   <div class="survey-block__charts">
@@ -131,77 +147,73 @@
   </div>
 </div>
 
-<div>
-  <!-- #3 -->
-  <h3 id="q3"></h3>
-  <!-- Question -->
-  <p>
-    <small
-      ><i>(<span id="ct3"></span> answers)</i></small
-    >
-  </p>
-  <div class="col"></div>
-  <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
-    <table id="r3" class="table table-bordered table-striped mb-0"></table>
-    <!-- Responses to Q3  -->
-  </div>
-  <div class="col">&nbsp;</div>
-</div>
-
+<!-- Question 4 -->
 <div>
   <h3 id="q4"></h3>
-  <!-- Question -->
   <p>
     <small
-      ><i>(<span id="ct4"></span> answers)</i></small
-    >
+      ><i>(<span id="ct4"></span> responses)</i>
+    </small>
   </p>
-  <div class="col"></div>
   <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
     <table id="r4" class="table table-bordered table-striped mb-0"></table>
     <!-- Responses to Q4  -->
   </div>
-  <div class="col">&nbsp;</div>
+  <div class="col">
+    <small><i>Scroll to see more responses...</i></small>
+  </div>
 </div>
 
+<!-- Question 5 -->
 <div>
   <h3 id="q5"></h3>
-  <!-- Question 5 -->
   <p>
     <small
-      ><i>(<span id="ct5"></span> answers)</i></small
+      ><i>(<span id="ct5"></span> responses)</i></small
     >
   </p>
-  <div class="col"></div>
-  <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
-    <table id="r5" class="table table-bordered table-striped mb-0"></table>
-    <!-- Responses to Q5  -->
+  <div class="survey-block__charts">
+    <div class="survey-block__chart">
+      <div id="r5a-title" class="survey-block__chart-title"></div>
+
+      <div class="survey-block__chart-canvas">
+        <canvas id="r5a"></canvas>
+      </div>
+    </div>
+    <div class="survey-block__chart">
+      <div id="r5b-title" class="survey-block__chart-title"></div>
+
+      <div class="survey-block__chart-canvas">
+        <canvas id="r5b"></canvas>
+      </div>
+    </div>
   </div>
-  <div class="col">&nbsp;</div>
 </div>
 
+<!-- Question 6 -->
 <div>
   <h3 id="q6"></h3>
-  <!-- Question -->
   <p>
     <small
-      ><i>(<span id="ct6"></span> answers)</i></small
-    >
+      ><i>(<span id="ct6"></span> responses)</i>
+    </small>
   </p>
-  <div class="col">&nbsp;</div>
-  <div class="col-10">
-    <canvas id="r6" style="max-width: 500px"></canvas>
-    <!-- Responses to Q6  -->
+  <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+    <table id="r6" class="table table-bordered table-striped mb-0"></table>
+    <!-- Responses to Q4  -->
   </div>
-  <div class="col">&nbsp;</div>
+  <div class="col">
+    <small><i>Scroll to see more responses...</i></small>
+  </div>
 </div>
 
+<!-- Question 7 -->
 <div>
   <h3 id="q7"></h3>
   <!-- Question -->
   <p>
     <small
-      ><i>(<span id="ct7"></span> answers)</i></small
+      ><i>(<span id="ct7"></span> responses)</i></small
     >
   </p>
   <div class="col">&nbsp;</div>
@@ -217,7 +229,7 @@
   <!-- Question -->
   <p>
     <small
-      ><i>(<span id="ct8"></span> answers)</i></small
+      ><i>(<span id="ct8"></span> responses)</i></small
     >
   </p>
   <div class="col">&nbsp;</div>
@@ -233,7 +245,7 @@
   <!-- Question -->
   <p>
     <small
-      ><i>(<span id="ct9"></span> answers)</i></small
+      ><i>(<span id="ct9"></span> responses)</i></small
     >
   </p>
   <div class="col">&nbsp;</div>
@@ -248,7 +260,7 @@
   <h3 id="q10"></h3>
   <p>
     <small
-      ><i>(<span id="ct10"></span> answers)</i></small
+      ><i>(<span id="ct10"></span> responses)</i></small
     >
   </p>
   <div class="col">&nbsp;</div>

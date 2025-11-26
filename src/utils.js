@@ -35,12 +35,12 @@ export function tablerow(accum, x) {
  * @returns void
  */
 export function tableize(ary, prop, qID) {
-  // console.log(`tableize: ${JSON.stringify(ary)} ${ary.length}`);
+  console.log(`tableize: ${prop} ${qID} ${JSON.stringify(ary[0])}`);
   let theDom = "";
 
   // check for missing prop
   if (ary[0][prop] === undefined) {
-    theDom = `Prop "${prop}" is missing`;
+    theDom = `Prop "${prop}" is missing in tablize`;
   } else {
     // Otherwise, we have data
     var theResps = ary

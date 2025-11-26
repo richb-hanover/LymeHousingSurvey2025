@@ -26,10 +26,7 @@ questions.forEach((q) => {
   document.getElementById(id).innerHTML = q;
   i += 1;
 });
-// for (let i = 1; i <= 10; i++) {
-//   id = "q" + i;
-//   document.getElementById(id).innerHTML = questions[i];
-// }
+
 /**
  * makePieChart() summarize the responses into the indicated <div> as a pie chart
  * @param {*} responses
@@ -56,46 +53,51 @@ makePieChart(responses, "2. 7 to 15 units", "r2c", "pie", "7 to 15 Units");
 makePieChart(responses, "3. Attainable", "r3a", "pie", "Attainable");
 makePieChart(responses, "3. Affordable", "r3b", "pie", "Affordable");
 
-// pieChart(responses, "View", ["2 new units/year", "No"], "2");
-barChart(
-  responses,
-  "Muni",
-  [
-    "N/A",
-    "Very unsatisfied",
-    "Unsatisfied",
-    "Neutral",
-    "Satisfied",
-    "Very Satisfied",
-  ],
-  "6"
-);
-barChart(
-  responses,
-  "School",
-  [
-    "N/A",
-    "Very unsatisfied",
-    "Unsatisfied",
-    "Neutral",
-    "Satisfied",
-    "Very Satisfied",
-  ],
-  "7"
-);
-barChart(
-  responses,
-  "Taxes",
-  ["N/A", "Too low", "About right", "Too high"],
-  "8",
-  "Taxes"
-);
+// Question 4
+tableize(responses, "4. Att-Aff Explanation", "4");
 
-tableize(responses, "Takeaway", "3");
-tableize(responses, "Like", "4");
-tableize(responses, "Change", "5");
-tableize(responses, "How-address", "9");
-tableize(responses, "Other", "10");
+// Question 5
+makeBarChart(responses, "5. Lyme Common", "r5a", "bar", "Lyme Common");
+
+// // pieChart(responses, "View", ["2 new units/year", "No"], "2");
+// barChart(
+//   responses,
+//   "Muni",
+//   [
+//     "N/A",
+//     "Very unsatisfied",
+//     "Unsatisfied",
+//     "Neutral",
+//     "Satisfied",
+//     "Very Satisfied",
+//   ],
+//   "6"
+// );
+// barChart(
+//   responses,
+//   "School",
+//   [
+//     "N/A",
+//     "Very unsatisfied",
+//     "Unsatisfied",
+//     "Neutral",
+//     "Satisfied",
+//     "Very Satisfied",
+//   ],
+//   "7"
+// );
+// barChart(
+//   responses,
+//   "Taxes",
+//   ["N/A", "Too low", "About right", "Too high"],
+//   "8",
+//   "Taxes"
+// );
+
+tableize(responses, "6. Other explanation", "6");
+// tableize(responses, "Change", "5");
+// tableize(responses, "How-address", "9");
+// tableize(responses, "Other", "10");
 
 /**
  * Beginning of main routine for the individual responses
