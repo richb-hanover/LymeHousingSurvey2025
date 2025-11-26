@@ -1,7 +1,7 @@
 export const responses = [
   {
     Timestamp: "11/6/25 14:45",
-    Response: "",
+    Response: 1,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -38,7 +38,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 14:56",
-    Response: "",
+    Response: 2,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -77,7 +77,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 14:56",
-    Response: "",
+    Response: 3,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -118,7 +118,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 14:57",
-    Response: "",
+    Response: 4,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -155,7 +155,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 14:58",
-    Response: "",
+    Response: 5,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -195,7 +195,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 15:02",
-    Response: "",
+    Response: 6,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -235,7 +235,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 15:06",
-    Response: "",
+    Response: 7,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -276,7 +276,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 15:09",
-    Response: "",
+    Response: 8,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -316,7 +316,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 15:19",
-    Response: "",
+    Response: 9,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -355,7 +355,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 15:40",
-    Response: "",
+    Response: 10,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -399,7 +399,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 15:45",
-    Response: "",
+    Response: 11,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -437,7 +437,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 16:28",
-    Response: "",
+    Response: 12,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -476,7 +476,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 17:12",
-    Response: "",
+    Response: 13,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -514,7 +514,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 17:32",
-    Response: "",
+    Response: 14,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "",
@@ -552,7 +552,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 17:36",
-    Response: "",
+    Response: 15,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -592,7 +592,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 17:57",
-    Response: "",
+    Response: 16,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "",
     "2. 3-6 units": "Yes",
@@ -631,7 +631,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 18:23",
-    Response: "",
+    Response: 17,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -669,7 +669,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 18:26",
-    Response: "",
+    Response: 18,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -708,7 +708,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 18:54",
-    Response: "",
+    Response: 19,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -747,7 +747,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 19:11",
-    Response: "",
+    Response: 20,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -788,7 +788,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 19:46",
-    Response: "",
+    Response: 21,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -828,7 +828,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 19:52",
-    Response: "",
+    Response: 22,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -873,7 +873,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 19:55",
-    Response: "",
+    Response: 23,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -913,7 +913,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 21:11",
-    Response: "",
+    Response: 24,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -950,7 +950,7 @@ export const responses = [
   },
   {
     Timestamp: "11/6/25 22:12",
-    Response: "",
+    Response: 25,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -989,7 +989,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 06:36",
-    Response: "",
+    Response: 26,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -1026,7 +1026,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 06:53",
-    Response: "",
+    Response: 27,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "Yes",
@@ -1063,7 +1063,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 07:15",
-    Response: "",
+    Response: 28,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1105,7 +1105,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 07:26",
-    Response: "",
+    Response: 29,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -1145,7 +1145,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 08:00",
-    Response: "",
+    Response: 30,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -1186,7 +1186,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 08:22",
-    Response: "",
+    Response: 31,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1226,7 +1226,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 09:05",
-    Response: "",
+    Response: 32,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1264,7 +1264,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 10:07",
-    Response: "",
+    Response: 33,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1304,7 +1304,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 10:12",
-    Response: "",
+    Response: 34,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -1344,7 +1344,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 10:45",
-    Response: "",
+    Response: 35,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1387,7 +1387,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 10:58",
-    Response: "",
+    Response: 36,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1431,7 +1431,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 12:10",
-    Response: "",
+    Response: 37,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1469,7 +1469,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 12:17",
-    Response: "",
+    Response: 38,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -1507,7 +1507,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 12:53",
-    Response: "",
+    Response: 39,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -1547,7 +1547,7 @@ export const responses = [
   },
   {
     Timestamp: "11/7/25 13:09",
-    Response: "",
+    Response: 40,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -1584,7 +1584,7 @@ export const responses = [
   },
   {
     Timestamp: "11/8/25 07:15",
-    Response: "",
+    Response: 41,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1624,7 +1624,7 @@ export const responses = [
   },
   {
     Timestamp: "11/8/25 07:59",
-    Response: "",
+    Response: 42,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1668,7 +1668,7 @@ export const responses = [
   },
   {
     Timestamp: "11/8/25 08:01",
-    Response: "",
+    Response: 43,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "Yes",
@@ -1707,7 +1707,7 @@ export const responses = [
   },
   {
     Timestamp: "11/8/25 08:18",
-    Response: "",
+    Response: 44,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "",
     "2. 3-6 units": "Yes",
@@ -1747,7 +1747,7 @@ export const responses = [
   },
   {
     Timestamp: "11/8/25 08:35",
-    Response: "",
+    Response: 45,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1792,7 +1792,7 @@ export const responses = [
   },
   {
     Timestamp: "11/8/25 08:57",
-    Response: "",
+    Response: 46,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1835,7 +1835,7 @@ export const responses = [
   },
   {
     Timestamp: "11/8/25 09:19",
-    Response: "",
+    Response: 47,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1874,7 +1874,7 @@ export const responses = [
   },
   {
     Timestamp: "11/8/25 11:23",
-    Response: "",
+    Response: 48,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "",
     "2. 3-6 units": "Yes",
@@ -1915,7 +1915,7 @@ export const responses = [
   },
   {
     Timestamp: "11/9/25 07:17",
-    Response: "",
+    Response: 49,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1954,7 +1954,7 @@ export const responses = [
   },
   {
     Timestamp: "11/9/25 10:03",
-    Response: "",
+    Response: 50,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -1997,7 +1997,7 @@ export const responses = [
   },
   {
     Timestamp: "11/9/25 11:24",
-    Response: "",
+    Response: 51,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -2035,7 +2035,7 @@ export const responses = [
   },
   {
     Timestamp: "11/9/25 12:19",
-    Response: "",
+    Response: 52,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2079,7 +2079,7 @@ export const responses = [
   },
   {
     Timestamp: "11/9/25 14:39",
-    Response: "",
+    Response: 53,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -2119,7 +2119,7 @@ export const responses = [
   },
   {
     Timestamp: "11/9/25 15:12",
-    Response: "",
+    Response: 54,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -2158,7 +2158,7 @@ export const responses = [
   },
   {
     Timestamp: "11/9/25 19:48",
-    Response: "",
+    Response: 55,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -2196,7 +2196,7 @@ export const responses = [
   },
   {
     Timestamp: "11/9/25 21:13",
-    Response: "",
+    Response: 56,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -2233,7 +2233,7 @@ export const responses = [
   },
   {
     Timestamp: "11/10/25 01:12",
-    Response: "",
+    Response: 57,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2277,7 +2277,7 @@ export const responses = [
   },
   {
     Timestamp: "11/10/25 08:34",
-    Response: "",
+    Response: 58,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2315,7 +2315,7 @@ export const responses = [
   },
   {
     Timestamp: "11/10/25 09:10",
-    Response: "",
+    Response: 59,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2355,7 +2355,7 @@ export const responses = [
   },
   {
     Timestamp: "11/10/25 13:41",
-    Response: "",
+    Response: 60,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -2397,7 +2397,7 @@ export const responses = [
   },
   {
     Timestamp: "11/11/25 08:26",
-    Response: "",
+    Response: 61,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2442,7 +2442,7 @@ export const responses = [
   },
   {
     Timestamp: "11/11/25 08:48",
-    Response: "",
+    Response: 62,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2483,7 +2483,7 @@ export const responses = [
   },
   {
     Timestamp: "11/11/25 09:19",
-    Response: "",
+    Response: 63,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2525,7 +2525,7 @@ export const responses = [
   },
   {
     Timestamp: "11/11/25 09:44",
-    Response: "",
+    Response: 64,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2567,7 +2567,7 @@ export const responses = [
   },
   {
     Timestamp: "11/11/25 12:03",
-    Response: "",
+    Response: 65,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2605,7 +2605,7 @@ export const responses = [
   },
   {
     Timestamp: "11/11/25 12:26",
-    Response: "",
+    Response: 66,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2644,7 +2644,7 @@ export const responses = [
   },
   {
     Timestamp: "11/11/25 12:51",
-    Response: "",
+    Response: 67,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2687,7 +2687,7 @@ export const responses = [
   },
   {
     Timestamp: "11/11/25 14:58",
-    Response: "",
+    Response: 68,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -2726,7 +2726,7 @@ export const responses = [
   },
   {
     Timestamp: "11/11/25 17:02",
-    Response: "",
+    Response: 69,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2766,7 +2766,7 @@ export const responses = [
   },
   {
     Timestamp: "11/12/25 11:47",
-    Response: "",
+    Response: 70,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -2805,7 +2805,7 @@ export const responses = [
   },
   {
     Timestamp: "11/12/25 18:20",
-    Response: "",
+    Response: 71,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "",
@@ -2844,7 +2844,7 @@ export const responses = [
   },
   {
     Timestamp: "11/12/25 19:26",
-    Response: "",
+    Response: 72,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2886,7 +2886,7 @@ export const responses = [
   },
   {
     Timestamp: "11/13/25 08:06",
-    Response: "",
+    Response: 73,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2924,7 +2924,7 @@ export const responses = [
   },
   {
     Timestamp: "11/13/25 09:54",
-    Response: "",
+    Response: 74,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -2966,7 +2966,7 @@ export const responses = [
   },
   {
     Timestamp: "11/13/25 16:38",
-    Response: "",
+    Response: 75,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3006,7 +3006,7 @@ export const responses = [
   },
   {
     Timestamp: "11/14/25 13:14",
-    Response: "",
+    Response: 76,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "",
     "2. 3-6 units": "Yes",
@@ -3044,7 +3044,7 @@ export const responses = [
   },
   {
     Timestamp: "11/14/25 19:22",
-    Response: "",
+    Response: 77,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3083,7 +3083,7 @@ export const responses = [
   },
   {
     Timestamp: "11/15/25 20:00",
-    Response: "",
+    Response: 78,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3124,7 +3124,7 @@ export const responses = [
   },
   {
     Timestamp: "11/15/25 20:11",
-    Response: "",
+    Response: 79,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3163,7 +3163,7 @@ export const responses = [
   },
   {
     Timestamp: "11/15/25 22:56",
-    Response: "",
+    Response: 80,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3204,7 +3204,7 @@ export const responses = [
   },
   {
     Timestamp: "11/16/25 06:56",
-    Response: "",
+    Response: 81,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3242,7 +3242,7 @@ export const responses = [
   },
   {
     Timestamp: "11/16/25 06:56",
-    Response: "",
+    Response: 82,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3284,7 +3284,7 @@ export const responses = [
   },
   {
     Timestamp: "11/16/25 08:05",
-    Response: "",
+    Response: 83,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3323,7 +3323,7 @@ export const responses = [
   },
   {
     Timestamp: "11/16/25 08:15",
-    Response: "",
+    Response: 84,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -3362,7 +3362,7 @@ export const responses = [
   },
   {
     Timestamp: "11/16/25 08:34",
-    Response: "",
+    Response: 85,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3399,7 +3399,7 @@ export const responses = [
   },
   {
     Timestamp: "11/16/25 12:03",
-    Response: "",
+    Response: 86,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "",
@@ -3437,7 +3437,7 @@ export const responses = [
   },
   {
     Timestamp: "11/16/25 16:07",
-    Response: "",
+    Response: 87,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3479,7 +3479,7 @@ export const responses = [
   },
   {
     Timestamp: "11/16/25 16:17",
-    Response: "",
+    Response: 88,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3518,7 +3518,7 @@ export const responses = [
   },
   {
     Timestamp: "11/16/25 16:52",
-    Response: "",
+    Response: 89,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3561,7 +3561,7 @@ export const responses = [
   },
   {
     Timestamp: "11/16/25 17:55",
-    Response: "",
+    Response: 90,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3600,7 +3600,7 @@ export const responses = [
   },
   {
     Timestamp: "11/17/25 07:43",
-    Response: "",
+    Response: 91,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3642,7 +3642,7 @@ export const responses = [
   },
   {
     Timestamp: "11/17/25 13:06",
-    Response: "",
+    Response: 92,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -3680,7 +3680,7 @@ export const responses = [
   },
   {
     Timestamp: "11/17/25 17:19",
-    Response: "",
+    Response: 93,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3720,7 +3720,7 @@ export const responses = [
   },
   {
     Timestamp: "11/17/25 20:04",
-    Response: "",
+    Response: 94,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3760,7 +3760,7 @@ export const responses = [
   },
   {
     Timestamp: "11/17/25 21:45",
-    Response: "",
+    Response: 95,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3800,7 +3800,7 @@ export const responses = [
   },
   {
     Timestamp: "11/17/25 23:26",
-    Response: "",
+    Response: 96,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3844,7 +3844,7 @@ export const responses = [
   },
   {
     Timestamp: "11/18/25 10:08",
-    Response: "",
+    Response: 97,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3885,7 +3885,7 @@ export const responses = [
   },
   {
     Timestamp: "11/18/25 13:59",
-    Response: "",
+    Response: 98,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -3922,7 +3922,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 08:31",
-    Response: "",
+    Response: 99,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -3961,7 +3961,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 08:47",
-    Response: "",
+    Response: 100,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -4000,7 +4000,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 09:49",
-    Response: "",
+    Response: 101,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4043,7 +4043,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 11:20",
-    Response: "",
+    Response: 102,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4085,7 +4085,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 11:29",
-    Response: "",
+    Response: 103,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4123,7 +4123,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 11:44",
-    Response: "",
+    Response: 104,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4163,7 +4163,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 12:23",
-    Response: "",
+    Response: 105,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "",
     "2. 3-6 units": "",
@@ -4201,7 +4201,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 13:22",
-    Response: "",
+    Response: 106,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4241,7 +4241,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 14:28",
-    Response: "",
+    Response: 107,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -4282,7 +4282,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 17:11",
-    Response: "",
+    Response: 108,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4322,7 +4322,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 17:14",
-    Response: "",
+    Response: 109,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4362,7 +4362,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 17:47",
-    Response: "",
+    Response: 110,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4406,7 +4406,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 17:47",
-    Response: "",
+    Response: 111,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4443,7 +4443,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 19:56",
-    Response: "",
+    Response: 112,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -4481,7 +4481,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 21:04",
-    Response: "",
+    Response: 113,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4519,7 +4519,7 @@ export const responses = [
   },
   {
     Timestamp: "11/19/25 21:27",
-    Response: "",
+    Response: 114,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -4562,7 +4562,7 @@ export const responses = [
   },
   {
     Timestamp: "11/20/25 12:50",
-    Response: "",
+    Response: 115,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "",
     "2. 3-6 units": "",
@@ -4601,7 +4601,7 @@ export const responses = [
   },
   {
     Timestamp: "11/20/25 14:36",
-    Response: "",
+    Response: 116,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "",
     "2. 3-6 units": "",
@@ -4640,7 +4640,7 @@ export const responses = [
   },
   {
     Timestamp: "11/20/25 14:52",
-    Response: "",
+    Response: 117,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4681,7 +4681,7 @@ export const responses = [
   },
   {
     Timestamp: "11/20/25 15:54",
-    Response: "",
+    Response: 118,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4719,7 +4719,7 @@ export const responses = [
   },
   {
     Timestamp: "11/20/25 19:51",
-    Response: "",
+    Response: 119,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "Yes",
@@ -4759,7 +4759,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 08:42",
-    Response: "",
+    Response: 120,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -4799,7 +4799,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 08:52",
-    Response: "",
+    Response: 121,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4841,7 +4841,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 09:08",
-    Response: "",
+    Response: 122,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4884,7 +4884,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 09:09",
-    Response: "",
+    Response: 123,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4923,7 +4923,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 10:16",
-    Response: "",
+    Response: 124,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -4962,7 +4962,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 10:25",
-    Response: "",
+    Response: 125,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5005,7 +5005,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 10:44",
-    Response: "",
+    Response: 126,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -5043,7 +5043,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 11:55",
-    Response: "",
+    Response: 127,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5083,7 +5083,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 12:24",
-    Response: "",
+    Response: 128,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5122,7 +5122,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 13:19",
-    Response: "",
+    Response: 129,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5165,7 +5165,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 13:33",
-    Response: "",
+    Response: 130,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5205,7 +5205,7 @@ export const responses = [
   },
   {
     Timestamp: "11/21/25 17:57",
-    Response: "",
+    Response: 131,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5244,7 +5244,7 @@ export const responses = [
   },
   {
     Timestamp: "11/22/25 05:59",
-    Response: "",
+    Response: 132,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5282,7 +5282,7 @@ export const responses = [
   },
   {
     Timestamp: "11/22/25 08:04",
-    Response: "",
+    Response: 133,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5322,7 +5322,7 @@ export const responses = [
   },
   {
     Timestamp: "11/22/25 09:21",
-    Response: "",
+    Response: 134,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5364,7 +5364,7 @@ export const responses = [
   },
   {
     Timestamp: "11/22/25 10:55",
-    Response: "",
+    Response: 135,
     "1. Rate of increase": "",
     "2. Duplexes": "",
     "2. 3-6 units": "",
@@ -5405,7 +5405,7 @@ export const responses = [
   },
   {
     Timestamp: "11/22/25 10:55",
-    Response: "",
+    Response: 136,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5443,7 +5443,7 @@ export const responses = [
   },
   {
     Timestamp: "11/22/25 10:58",
-    Response: "",
+    Response: 137,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5481,7 +5481,7 @@ export const responses = [
   },
   {
     Timestamp: "11/22/25 19:32",
-    Response: "",
+    Response: 138,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5520,7 +5520,7 @@ export const responses = [
   },
   {
     Timestamp: "11/23/25 06:31",
-    Response: "",
+    Response: 139,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5559,7 +5559,7 @@ export const responses = [
   },
   {
     Timestamp: "11/23/25 10:38",
-    Response: "",
+    Response: 140,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "",
     "2. 3-6 units": "Yes",
@@ -5597,7 +5597,7 @@ export const responses = [
   },
   {
     Timestamp: "11/23/25 14:27",
-    Response: "",
+    Response: 141,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -5634,7 +5634,7 @@ export const responses = [
   },
   {
     Timestamp: "11/23/25 15:12",
-    Response: "",
+    Response: 142,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5673,7 +5673,7 @@ export const responses = [
   },
   {
     Timestamp: "11/23/25 21:20",
-    Response: "",
+    Response: 143,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5713,7 +5713,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 07:27",
-    Response: "",
+    Response: 144,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -5750,7 +5750,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 08:49",
-    Response: "",
+    Response: 145,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5790,7 +5790,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 12:49",
-    Response: "",
+    Response: 146,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5832,7 +5832,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 17:02",
-    Response: "",
+    Response: 147,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5873,7 +5873,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 18:01",
-    Response: "",
+    Response: 148,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5914,7 +5914,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 18:46",
-    Response: "",
+    Response: 149,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -5951,7 +5951,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 19:17",
-    Response: "",
+    Response: 150,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -5989,7 +5989,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 19:18",
-    Response: "",
+    Response: 151,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6029,7 +6029,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 19:22",
-    Response: "",
+    Response: 152,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6068,7 +6068,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 20:02",
-    Response: "",
+    Response: 153,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6108,7 +6108,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 20:12",
-    Response: "",
+    Response: 154,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6150,7 +6150,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 21:09",
-    Response: "",
+    Response: 155,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6189,7 +6189,7 @@ export const responses = [
   },
   {
     Timestamp: "11/24/25 22:20",
-    Response: "",
+    Response: 156,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6227,7 +6227,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 02:34",
-    Response: "",
+    Response: 157,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -6266,7 +6266,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 05:28",
-    Response: "",
+    Response: 158,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6304,7 +6304,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 05:30",
-    Response: "",
+    Response: 159,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -6342,7 +6342,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 08:25",
-    Response: "",
+    Response: 160,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6383,7 +6383,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 09:27",
-    Response: "",
+    Response: 161,
     "1. Rate of increase": "5-fold increase (10 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6424,7 +6424,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 09:39",
-    Response: "",
+    Response: 162,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -6462,7 +6462,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 10:47",
-    Response: "",
+    Response: 163,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "No",
@@ -6500,7 +6500,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 11:38",
-    Response: "",
+    Response: 164,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6540,7 +6540,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 12:05",
-    Response: "",
+    Response: 165,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6580,7 +6580,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 14:20",
-    Response: "",
+    Response: 166,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -6619,7 +6619,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 15:49",
-    Response: "",
+    Response: 167,
     "1. Rate of increase": "",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6660,7 +6660,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 16:22",
-    Response: "",
+    Response: 168,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6703,7 +6703,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 17:25",
-    Response: "",
+    Response: 169,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "",
@@ -6744,7 +6744,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 18:11",
-    Response: "",
+    Response: 170,
     "1. Rate of increase": "2-fold increase (4 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6781,7 +6781,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 18:31",
-    Response: "",
+    Response: 171,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6825,7 +6825,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 19:37",
-    Response: "",
+    Response: 172,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "No",
     "2. 3-6 units": "No",
@@ -6862,7 +6862,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 20:15",
-    Response: "",
+    Response: 173,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6902,7 +6902,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 20:18",
-    Response: "",
+    Response: 174,
     "1. Rate of increase": "4-fold increase (8 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6944,7 +6944,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 20:33",
-    Response: "",
+    Response: 175,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -6987,7 +6987,7 @@ export const responses = [
   },
   {
     Timestamp: "11/25/25 22:58",
-    Response: "",
+    Response: 176,
     "1. Rate of increase": "No increase (2 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
@@ -7027,7 +7027,7 @@ export const responses = [
   },
   {
     Timestamp: "11/26/25 00:07",
-    Response: "",
+    Response: 177,
     "1. Rate of increase": "3-fold increase (6 new units/year)",
     "2. Duplexes": "Yes",
     "2. 3-6 units": "Yes",
