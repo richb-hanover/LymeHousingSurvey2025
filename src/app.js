@@ -163,7 +163,7 @@ makeAChart(
 makeAChart(responses, "5. Nowhere", "r5-9", "bar", "Nowhere", "");
 
 // Question 6
-makeAQuestion(6, "responses", 6);
+makeAQuestion(6, "responses", 1);
 tableize(responses, "6. Other explanation", "6");
 
 // Question 7
@@ -191,6 +191,133 @@ makeAChart(
   2,
   "value"
 );
+
+// Question 9
+makeAQuestion(9, "chart", 1);
+makeAChart(
+  responses,
+  "9. Infill",
+  "r9-1",
+  "pie",
+  "Should infill have as many as four units?",
+  "",
+  0,
+  "label"
+);
+
+// Question 10
+makeAQuestion(10, "chart", 1);
+makeAChart(
+  responses,
+  "10. Lyme School",
+  "r10-1",
+  "pie",
+  "School growth should limit housing choices",
+  "",
+  0,
+  "label"
+);
+
+// Question 11
+makeAQuestion(11, "responses", 1);
+tableize(responses, "11. Lyme School Explanation", "11");
+
+// Question 12
+makeAQuestion(12, "chart", 1);
+makeAChart(
+  responses,
+  "12. Housing initiatives",
+  "r12-1",
+  "checkboxes",
+  "Housing initiatives",
+  "",
+  1,
+  "value"
+);
+
+// Question 13   "13. How long have you lived in Lyme?",
+makeAQuestion(13, "chart", 1);
+makeAChart(
+  responses,
+  "13. Years in Lyme",
+  "r13-1",
+  "pie",
+  "Years in Lyme",
+  "",
+  0,
+  "label"
+);
+
+// Question "14. Do you plan to move out of Lyme in the next 5 years?",
+
+makeAQuestion(14, "chart", 1);
+makeAChart(
+  responses,
+  "14. Plan to move",
+  "r14-1",
+  "pie",
+  "Plan to move in 5 years",
+  "",
+  0,
+  "label"
+);
+
+// Question 15. Please explain your answer above
+
+makeAQuestion(15, "responses", 1);
+tableize(responses, "15. Explanation of moving", "15");
+
+// Question 16. How old are you?
+
+makeAQuestion(16, "chart", 1);
+makeAChart(
+  responses,
+  "16. Age range",
+  "r16-1",
+  "pie",
+  "Current age",
+  "",
+  0,
+  "label"
+);
+
+// Question 17. Do you hope to buy/rent a smaller house?
+
+makeAQuestion(17, "chart", 1);
+makeAChart(
+  responses,
+  "17. Smaller house",
+  "r17-1",
+  "pie",
+  "Smaller house",
+  "",
+  0,
+  "label"
+);
+
+// Question 18. Please explain your answer above
+
+makeAQuestion(18, "responses", 1);
+tableize(responses, "18. Smaller house explanation", "18");
+
+// Question 19. Do you currently own/rent/live with friends or relatives?
+
+makeAQuestion(19, "chart", 1);
+makeAChart(
+  responses,
+  "19. Currently own",
+  "r19-1",
+  "pie",
+  "Currently own a house",
+  "",
+  0,
+  "label"
+);
+
+// Question 20. Please explain your answer above
+
+makeAQuestion(20, "responses", 1);
+tableize(responses, "20. Other thoughts", "20");
 
 /**
  * Beginning of main routine for the individual responses
