@@ -19,9 +19,6 @@ const CHART_COLORS = [
   "#994499",
 ];
 
-// one-time initialization of the "%" labels (pie charts)
-// Chart.register(ChartDataLabels);
-
 export function makeChart(id, type, labels, data, title) {
   const canvas = document.getElementById(id);
   if (!canvas) {
@@ -31,8 +28,6 @@ export function makeChart(id, type, labels, data, title) {
     labels,
     data
   );
-  // const sortedLabels = labels;
-  // const sortedData = data;
 
   new Chart(canvas, {
     type,
@@ -47,6 +42,7 @@ export function makeChart(id, type, labels, data, title) {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           position: "right",

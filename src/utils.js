@@ -40,7 +40,7 @@ export function tableize(ary, prop, qID) {
 
   // check for missing prop
   if (ary[0][prop] === undefined) {
-    theDom = `Prop ${prop} is missing`;
+    theDom = `Prop "${prop}" is missing`;
   } else {
     // Otherwise, we have data
     var theResps = ary

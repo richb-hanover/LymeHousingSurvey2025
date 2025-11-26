@@ -16,6 +16,7 @@
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     margin-top: 0;
+    border: 3px solid hotpink;
   }
 
   .survey-block__chart {
@@ -23,12 +24,14 @@
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
+    border: 1px solid blue;
   }
 
   .survey-block__chart canvas {
-    width: 350px !important;
-    height: 350px !important;
+    width: 700px;
+    height: 250px;
     max-width: 100%;
+    border: 1px solid green;
   }
 </style>
 
@@ -45,9 +48,15 @@
     <div class="survey-block__chart">
       <canvas id="r1"></canvas>
     </div>
+    <div class="survey-block__chart">
+      <canvas id="r1a"></canvas>
+    </div>
+    <div class="survey-block__chart">
+      <canvas id="r1a=b"></canvas>
+    </div>
   </div>
 </div>
-<!-- End of "multi-col" 2 -->
+<!-- End of "multi-col" question 1 -->
 <div>
   <!-- Original #2 -->
   <h3 id="q2"></h3>
@@ -58,7 +67,7 @@
     >
   </p>
   <div class="col">&nbsp;</div>
-  <div class="col-10" style="width: 250px; height: 250px">
+  <div class="col-10">
     <canvas id="r2"></canvas>
     <!-- Responses to Q2  -->
   </div>
