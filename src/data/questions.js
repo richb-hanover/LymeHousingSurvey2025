@@ -1,7 +1,7 @@
 export const questions = [
   "Timestamp",
   "What is your preferred rate of growth?",
-  "Were you able to view the video of the presentation on-line?",
+  "Should multi-unit dwellings be allowed as new construction?",
   "What did you take away from the Forum/Video?",
   "What do you like about Lyme as it is today?",
   "What would you like to change about Lyme going forward?",

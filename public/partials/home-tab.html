@@ -14,7 +14,7 @@
   .survey-block__charts {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     margin-top: 0;
     border: 3px solid hotpink;
   }
@@ -46,13 +46,8 @@
 
   <div class="survey-block__charts">
     <div class="survey-block__chart">
+      <div id="r1-title"></div>
       <canvas id="r1"></canvas>
-    </div>
-    <div class="survey-block__chart">
-      <canvas id="r1a"></canvas>
-    </div>
-    <div class="survey-block__chart">
-      <canvas id="r1a=b"></canvas>
     </div>
   </div>
 </div>
@@ -66,12 +61,17 @@
       ><i>(<span id="ct2"></span> answers)</i></small
     >
   </p>
-  <div class="col">&nbsp;</div>
-  <div class="col-10">
-    <canvas id="r2"></canvas>
-    <!-- Responses to Q2  -->
+  <div class="survey-block__charts">
+    <div class="survey-block__chart">
+      <canvas id="r2a"></canvas>
+    </div>
+    <div class="survey-block__chart">
+      <canvas id="r2b"></canvas>
+    </div>
+    <div class="survey-block__chart">
+      <canvas id="r2c"></canvas>
+    </div>
   </div>
-  <div class="col">&nbsp;</div>
 </div>
 
 <div>
