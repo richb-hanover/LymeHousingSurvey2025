@@ -132,6 +132,18 @@ makeAChart(
   "Commercial housing types",
   "in a building"
 );
+
+// Question 8
+makeAQuestion(8, "chart", 2);
+makeAChart(
+  responses,
+  "8. Multi-unit districs",
+  "r8",
+  "checkboxes",
+  "Districts for multi-unit",
+  ""
+);
+
 /**
  * Beginning of main routine for the individual responses
  */

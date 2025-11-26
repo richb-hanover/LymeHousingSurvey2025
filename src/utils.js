@@ -128,7 +128,7 @@ export function cleanupLabels(responses, heading, checkboxes, toStrip) {
  * alphabetizeCounts(values, trimString)
  * @param values string[]
  * @param string to trim
- * @returns [labels string[], counts number[]] sorted alphabetically by label
+ * @returns [labels string[], counts number[]] sorted alphabetically by label plus
  */
 export function alphabetizeCounts(values) {
   // console.log(`alphabetize values: ${JSON.stringify(values)}`);
