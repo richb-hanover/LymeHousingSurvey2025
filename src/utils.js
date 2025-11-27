@@ -366,24 +366,66 @@ export function formatScale(x) {
  * @return "<dl>" with the properties
  */
 export function formatIndividualResponse(resp) {
+  function r(respID) {
+    if (resp[respID] == undefined) alert(`Bad ID in r(): ${respID}`);
+    return resp[respID] || "-";
+  }
   var retstr = "";
 
-  retstr += " <dl>";
-  retstr += " <b>Answer Number:</b> " + resp.Response;
-  retstr += " <b>Attend Forum:</b> " + formatScale(resp.Attend);
-  retstr += " <b>View online:</b>  " + formatScale(resp.View);
-  retstr += " <br />";
-  retstr += " <b>Municipal Tax Value:</b>  " + formatScale(resp.Muni);
-  retstr += " <b>School Tax Value:</b>  " + formatScale(resp.School);
-  retstr += " <b>Overall Tax:</b>  " + formatScale(resp.Taxes);
-  retstr += " <br />  <br />";
-  retstr += "<dt>Takeaway:</dt>  <dd>" + cleanText(resp.Takeaway) + "</dd>";
-  retstr += "<dt>Like about Lyme:</dt>  <dd>" + cleanText(resp.Like) + "</dd>";
-  retstr +=
-    "<dt>Desirable Changes:</dt>  <dd>" + cleanText(resp.Change) + "</dd>";
-  retstr +=
-    "<dt>How address:</dt>  <dd>" + cleanText(resp["How-address"]) + "</dd>";
-  retstr += "<dt>Other thoughts:</dt>  <dd>" + cleanText(resp.Other) + "</dd>";
+  retstr += ` <dl>`;
+  retstr += `<b>Answer Number:</b> ${resp.Response} <br />`;
+  retstr += `<b>Age:</b> ${r("16. Age range")} `;
+  retstr += `<b>Years in Lyme:</b> ${r("13. Years in Lyme")} `;
+  retstr += ` <b>${r("19. Currently own")}</b>`;
+  retstr += `<br /><br />`;
+  retstr += `<b>Rate of increase:</b> ${r("1. Rate of increase")} <br />`;
+  retstr += `<b>Infill with 4-units?:</b> ${r("9. Infill")}`;
+  retstr += `<br /> <br />`;
+  retstr += `<dt>Kinds of new construction:</dt>  `;
+  retstr += `<dd> Duplex: ${r("2. Duplexes")}; 3-6 units: ${r(
+    "2. 3-6 units"
+  )}; 7-15 units: ${r("2. 7 to 15 units")}</dd>`;
+  retstr += `<b>Affordable</b> ${r("3. Affordable")} <b>Attainable:</b>  ${r(
+    "3. Attainable"
+  )}`;
+  retstr += `<br /> `;
+  retstr += `<b>Explanation:</b> ${r("4. Att-Aff Explanation")}	`;
+  retstr += `<br /> <br />`;
+  retstr += `<dt>Appropriate districts/locations for housing:</dt>  
+    <dd> <ul>
+      <li>Lyme Common: ${r("5. Lyme Common")}
+      <li>Lyme Center: ${r("5. Lyme Center")}
+      <li>Commercial: ${r("5. Commercial")}
+      <li>Rural: ${r("5. Commercial")}
+      <li>East Lyme: ${r("5. East Lyme")}
+      <li>Holts Ledge: ${r("5. Holts Ledge")}
+      <li>Mtn & Forest: ${r("5. Mtn & Forest")}
+      <li>Wherever Single Family: ${r("5. Wherever SF units")}
+      <li>Nowhere: ${r("5. Nowhere")}
+      </ul>`;
+  retstr += `<dt>Other locations:</dt> <dd>${r("6. Other explanation")}	</dd>`;
+  retstr += `<dt>Housing in Commercial District:</dt>  <dd>${r(
+    "7. Housing in Commercial"
+  )}</dd>`;
+  retstr += `<dt>Appropriate districts/locations for multi-unit housing:</dt>  
+    <dd> ${r("8. Multi-unit districs")}</dd>`;
+  // retstr += `<br />`;
+  retstr += `<b>Should school capacity in 2040 limit housing options?:</b> ${r(
+    "10. Lyme School"
+  )} <br />`;
+  retstr += `<b>Explanation:</b> ${r("11. Lyme School Explanation")}	`;
+  retstr += `<br /><br />`;
+  retstr += `<dt>Important Housing Initiatives:</dt>  <dd>${r(
+    "12. Housing initiatives"
+  )}</dd>`;
+  retstr += `<b>Plan to move in 5 years:</b> ${r("14. Plan to move")}	<br />`;
+  retstr += `<b>Explanation:</b> ${r("15. Explanation of moving")}	`;
+  retstr += `<br /><br />`;
+
+  retstr += `<b>Buy/rent a smalller home?:</b> ${r("17. Smaller house")}	<br />`;
+  retstr += `<b>Explanation:</b> ${r("18. Smaller house explanation")}	`;
+  retstr += `<br /><br />`;
+  retstr += `<b>Other thoughts:</b> ${r("20. Other thoughts")}`;
   retstr += "</dl>";
 
   return retstr;
