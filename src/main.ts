@@ -1,8 +1,10 @@
 import { marked } from "marked";
 import readmeContent from "../README.md?raw";
 
-async function loadTabPartials() {
-  const containers = Array.from(document.querySelectorAll("[data-partial]"));
+async function loadTabPartials(): Promise<void> {
+  const containers = Array.from(
+    document.querySelectorAll<HTMLElement>("[data-partial]")
+  );
   const loaders = containers.map(async (container) => {
     const path = container.getAttribute("data-partial");
     if (!path) {
@@ -17,22 +19,29 @@ async function loadTabPartials() {
   await Promise.all(loaders);
 }
 
-function loadReadme() {
+function loadReadme(): void {
   const target = document.getElementById("readme-content");
   if (!target) {
     return;
   }
-  target.innerHTML = marked.parse(readmeContent);
+  const rendered = marked.parse(readmeContent);
+  if (rendered instanceof Promise) {
+    rendered.then((html) => {
+      target.innerHTML = html;
+    });
+  } else {
+    target.innerHTML = rendered;
+  }
 }
 
-async function init() {
+async function init(): Promise<void> {
   try {
     await loadTabPartials();
     loadReadme();
-    await import("./app.js");
+    await import("./app");
   } catch (err) {
     console.error("Initialization error", err);
   }
 }
 
-init();
+void init();

@@ -19,4 +19,6 @@ export const questions = [
   "18. Please explain your answer above",
   "19. Do you currently own/rent/live with friends or relatives?",
   "20. Other thoughts you care to share",
-];
+] as const;
+
+export type QuestionPrompt = (typeof questions)[number];

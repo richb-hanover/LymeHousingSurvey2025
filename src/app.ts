@@ -3,13 +3,19 @@
  */
 import {
   tableize,
-  barChart,
   formatIndividualResponse,
   summarizeResponseArray,
-} from "./utils.js";
-import { makeChart } from "./chartjs-utils.js";
-import { responses } from "./data/responses.js";
-import { questions } from "./data/questions.js";
+  type SortBy,
+} from "./utils";
+import { makeChart, type ChartDisplayType } from "./chartjs-utils";
+import {
+  responses,
+  type ResponseStringKey,
+  type SurveyResponse,
+} from "./data/responses";
+import { questions } from "./data/questions";
+
+type QuestionType = "chart" | "responses" | "checkboxes";
 
 /**
  * makeAQuestion()
@@ -17,23 +23,30 @@ import { questions } from "./data/questions.js";
  * @param string - question type ("chart", "responses")
  * @param count - count of elements to display (# pie/bar charts)
  */
-function makeAQuestion(qNumber, qType, qCount) {
+function makeAQuestion(
+  qNumber: number,
+  qType: QuestionType,
+  qCount: number
+) {
   const listOfResponses = `
-  <h3 id="q${qNumber}"></h3>
-  <p><small><i>(<span id="ct${qNumber}"></span> responses)</i></small></p>
-  <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
-    <table id="r${qNumber}" class="table table-bordered table-striped mb-0"></table>
+  <div>
+    <h3 id="q${qNumber}"></h3>
+    <p><small><i>(<span id="ct${qNumber}"></span> responses)</i></small></p>
+    
   </div>
 `;
+// <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+//       <table id="r${qNumber}" class="table table-bordered table-striped mb-0"></table>
+//     </div>
+
   const listOfCharts = `
-  <h3 id="q${qNumber}"></h3>
-  <p><small><i>(<span id="ct${qNumber}"></span> responses)</i></small></p>
-  <div class="survey-block__charts">
-    
-   </div>
-   <div>
+  <div>
+    <h3 id="q${qNumber}"></h3>
+    <p><small><i>(<span id="ct${qNumber}"></span> responses)</i></small></p>
+    <div class="survey-block__charts"> </div>
+  </div>
 `;
-  const surveyBlockChart = (subq) => `
+  const surveyBlockChart = (subq: number) => `
     <div class="survey-block__chart">
       <div id="r${qNumber}-${subq}-title" class="survey-block__chart-title"></div>
 
@@ -42,13 +55,22 @@ function makeAQuestion(qNumber, qType, qCount) {
       </div>
     </div>
 `;
-  const replacementHTML = qType == "responses" ? listOfResponses : listOfCharts;
+const surveyTextAnswers = (subq: number) => 
+  `<div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+    <table id="r${qNumber}" class="table table-bordered table-striped mb-0"></table>
+  </div>`;
+
+// responses get the "listOfResponses", charts get "listOfCharts"
+  const replacementHTML = qType === "responses" ? listOfResponses : listOfCharts;
   const home = document.getElementById("home");
+  if (!home) {
+    throw new Error("Home container not found");
+  }
   const block = document.createElement("div");
   block.className = "survey-block";
   block.innerHTML = replacementHTML;
   home.appendChild(block);
-  if (qType === "chart" && qCount > 0) {
+  if ((qType === "chart" || qType === "checkboxes") && qCount > 0) {
     const chartContainer = block.querySelector(".survey-block__charts");
     if (chartContainer) {
       for (let idx = 1; idx <= qCount; idx += 1) {
@@ -56,9 +78,16 @@ function makeAQuestion(qNumber, qType, qCount) {
       }
     }
   }
-  const qID = "q" + String(qNumber);
-  console.log(`qID: ${qID}`);
-  document.getElementById(qID).innerHTML = questions[qNumber - 1];
+  if (qType === "checkboxes" || qType == "responses") {
+    home.insertAdjacentHTML("beforeend", surveyTextAnswers(qNumber));
+  }
+  const qID = `q${qNumber}`;
+  const questionHeading = document.getElementById(qID);
+  if (questionHeading) {
+    questionHeading.innerHTML = questions[qNumber - 1] ?? "";
+  } else {
+    console.warn(`Question heading ${qID} not found`);
+  }
 }
 
 /**
@@ -71,25 +100,28 @@ function makeAQuestion(qNumber, qType, qCount) {
  */
 
 function makeAChart(
-  responses,
-  heading,
-  div,
-  type,
-  title,
-  toStrip,
-  minCount,
-  sortBy
+  responseSet: SurveyResponse[],
+  heading: ResponseStringKey,
+  div: string,
+  type: ChartDisplayType,
+  title: string,
+  toStrip = "",
+  minCount = 0,
+  sortBy: SortBy = "label"
 ) {
-  let [labels, counts] = summarizeResponseArray(
-    responses,
+  const [labels, counts, others] = summarizeResponseArray(
+    responseSet,
     heading,
     type,
     toStrip,
     minCount,
     sortBy
   );
-  // console.log(`labels in makeAChart(): ${labels}, toStrip: ${toStrip}`);
   makeChart(div, type, labels, counts, title);
+  if (others.length > 0){
+    
+  }
+  ]
 }
 
 /**
@@ -152,7 +184,7 @@ makeAQuestion(6, "responses", 1);
 tableize(responses, "6. Other explanation", "6");
 
 // Question 7
-makeAQuestion(7, "chart", 1);
+makeAQuestion(7, "checkboxes", 1);
 makeAChart(
   responses,
   "7. Housing in Commercial",
@@ -165,7 +197,7 @@ makeAChart(
 );
 
 // Question 8
-makeAQuestion(8, "chart", 1);
+makeAQuestion(8, "checkboxes", 1);
 makeAChart(
   responses,
   "8. Multi-unit districs",
@@ -208,7 +240,7 @@ makeAQuestion(11, "responses", 1);
 tableize(responses, "11. Lyme School Explanation", "11");
 
 // Question 12
-makeAQuestion(12, "chart", 1);
+makeAQuestion(12, "checkboxes", 1);
 makeAChart(
   responses,
   "12. Housing initiatives",
@@ -307,14 +339,17 @@ tableize(responses, "20. Other thoughts", "20");
 /**
  * Beginning of main routine for the individual responses
  */
-document.getElementById("ct").innerHTML = responses.length;
+const totalCountEl = document.getElementById("ct");
+if (totalCountEl) {
+  totalCountEl.textContent = responses.length.toString();
+}
 
-var tbody = responses
-  .map(function (x) {
-    return formatIndividualResponse(x);
-  })
-  .map(function (x) {
-    return "<tr><td>" + x + "</td></tr>";
-  });
+const tbody = responses
+  .map((response) => formatIndividualResponse(response))
+  .map((markup) => `<tr><td>${markup}</td></tr>`)
+  .join("");
 
-document.getElementById("resps").innerHTML = "<tbody>" + tbody + "</tbody>";
+const responsesTable = document.getElementById("resps");
+if (responsesTable) {
+  responsesTable.innerHTML = `<tbody>${tbody}</tbody>`;
+}

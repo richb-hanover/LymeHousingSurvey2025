@@ -8,8 +8,14 @@ import {
   LinearScale,
   Tooltip,
   Legend,
+  ChartConfiguration,
+  ChartType,
 } from "chart.js";
-import ChartDataLabels from "chartjs-plugin-datalabels";
+import ChartDataLabels, {
+  Context as DataLabelsContext,
+} from "chartjs-plugin-datalabels";
+
+export type ChartDisplayType = "pie" | "bar" | "checkboxes";
 
 ChartJS.register(
   ArcElement,
@@ -39,21 +45,26 @@ const CHART_COLORS = [
   "#994499",
 ];
 
-export function makeChart(id, type, labels, data, title) {
+export function makeChart(
+  id: string,
+  type: ChartDisplayType,
+  labels: string[],
+  data: number[],
+  title?: string
+): void {
   const canvas = document.getElementById(id);
-  if (!canvas) {
+  if (!(canvas instanceof HTMLCanvasElement)) {
     throw new Error(`Chart container "${id}" not found`);
   }
-  // default chart options
-  let chartType = type;
+  const resolvedType: ChartType = type === "checkboxes" ? "bar" : type;
 
-  const options = {
-    type: chartType,
+  const config: ChartConfiguration<ChartType, number[], string> = {
+    type: resolvedType,
     data: {
-      labels: labels,
+      labels,
       datasets: [
         {
-          data: data,
+          data,
           backgroundColor: CHART_COLORS.slice(0, labels.length),
         },
       ],
@@ -69,22 +80,23 @@ export function makeChart(id, type, labels, data, title) {
             boxWidth: 20,
           },
         },
-        legendTitle: {
-          text: title,
-          font: "bold 18px sans-serif",
-          color: "#111",
-        },
         datalabels: {
           color: "#fff",
           font: { weight: "bold" },
-          formatter: (value, ctx) => {
-            const total = ctx.chart.data.datasets[0].data.reduce(
-              (a, b) => a + b,
-              0
-            );
+          formatter: (value: number, ctx: DataLabelsContext) => {
+            const dataset = ctx.chart.data.datasets[0];
+            const points = (dataset?.data as number[]) ?? [];
+            const total = points.reduce((sum, current) => sum + current, 0);
+            if (!total) {
+              return "0%";
+            }
             const pct = ((value / total) * 100).toFixed(1);
-            return pct + "%";
+            return `${pct}%`;
           },
+        },
+        title: {
+          display: false,
+          text: title ?? "",
         },
       },
       layout: {
@@ -93,16 +105,14 @@ export function makeChart(id, type, labels, data, title) {
     },
   };
 
-  if (type == "checkboxes") {
-    options.type = "bar";
-    options.options.indexAxis = "y";
+  if (type === "checkboxes" && config.options) {
+    config.options.indexAxis = "y";
   }
-  // set the title above the chart
+
   const titleEl = document.getElementById(`${id}-title`);
   if (titleEl && title) {
     titleEl.textContent = title;
   }
 
-  // console.log(`chart options: ${JSON.stringify(options)}`);
-  new ChartJS(canvas, options);
+  new ChartJS(canvas, config);
 }

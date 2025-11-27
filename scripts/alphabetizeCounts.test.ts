@@ -1,9 +1,9 @@
-import { alphabetizeCounts } from "../src/utils.js";
+import { alphabetizeCounts } from "../src/utils";
 
 const SAMPLE = ["a", "a", "a", "a", "b", "b", "b", "c", "d"];
 const MIN_COUNT = 2;
 
-const [labels, counts, other] = alphabetizeCounts(SAMPLE, "", MIN_COUNT);
+const [labels, counts, other] = alphabetizeCounts(SAMPLE, MIN_COUNT, "label");
 
 console.log("Input:", SAMPLE);
 console.log("Labels >", MIN_COUNT, ":", labels);
