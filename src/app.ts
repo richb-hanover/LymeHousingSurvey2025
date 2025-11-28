@@ -33,7 +33,7 @@ makeAChart(responses, "3. Affordable", "r3-2", "pie", "Affordable", "");
 
 // Question 4
 makeAQuestion(4, "responses", 1);
-tableize(responses, "4. Att-Aff Explanation", "4");
+tableize(responses, "4. Att-Aff Explanation", "r4");
 
 // Question 5
 makeAQuestion(5, "chart", 9);
@@ -62,7 +62,7 @@ makeAChart(responses, "5. Nowhere", "r5-9", "bar", "Nowhere", "");
 
 // Question 6
 makeAQuestion(6, "responses", 1);
-tableize(responses, "6. Other explanation", "6");
+tableize(responses, "6. Other explanation", "r6");
 
 // Question 7
 makeAQuestion(7, "checkboxes", 1);
@@ -118,7 +118,7 @@ makeAChart(
 
 // Question 11
 makeAQuestion(11, "responses", 1);
-tableize(responses, "11. Lyme School Explanation", "11");
+tableize(responses, "11. Lyme School Explanation", "r11");
 
 // Question 12
 makeAQuestion(12, "checkboxes", 1);
@@ -163,7 +163,7 @@ makeAChart(
 // Question 15. Please explain your answer above
 
 makeAQuestion(15, "responses", 1);
-tableize(responses, "15. Explanation of moving", "15");
+tableize(responses, "15. Explanation of moving", "r15");
 
 // Question 16. How old are you?
 
@@ -196,7 +196,7 @@ makeAChart(
 // Question 18. Please explain your answer above
 
 makeAQuestion(18, "responses", 1);
-tableize(responses, "18. Smaller house explanation", "18");
+tableize(responses, "18. Smaller house explanation", "r18");
 
 // Question 19. Do you currently own/rent/live with friends or relatives?
 
@@ -215,7 +215,7 @@ makeAChart(
 // Question 20. Please explain your answer above
 
 makeAQuestion(20, "responses", 1);
-tableize(responses, "20. Other thoughts", "20");
+tableize(responses, "20. Other thoughts", "r20");
 
 /**
  * Beginning of main routine for the individual responses

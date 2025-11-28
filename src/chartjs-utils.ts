@@ -46,7 +46,7 @@ const CHART_COLORS = [
 ];
 
 export function makeChart(
-  id: string,
+  id: string, // "r#-#"
   type: ChartDisplayType,
   labels: string[],
   data: number[],

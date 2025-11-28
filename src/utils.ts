@@ -40,7 +40,7 @@ export function tablerow(accum: string, x: string): string {
 export function tableize(
   responses: SurveyResponse[],
   prop: ResponseStringKey,
-  qID: string,
+  rID: string, // "r#" - id of element to receive the data
 ): void {
   if (!responses.length) {
     return;
@@ -66,7 +66,7 @@ export function tableize(
         (entry) => `${entry.resp} <i>(Answer #${entry.item.toString()})</i>`,
       );
 
-    const countEl = document.getElementById(`ct${qID}`);
+    const countEl = document.getElementById(`ct${rID}`);
     if (countEl) {
       countEl.textContent = formattedResponses.length.toString();
     }
@@ -74,7 +74,7 @@ export function tableize(
     markup = formattedResponses.reduce(tablerow, "");
   }
 
-  const tableEl = document.getElementById(`r${qID}-2`);
+  const tableEl = document.getElementById(`${rID}t`);
   if (tableEl) {
     tableEl.innerHTML = markup;
   }
@@ -97,7 +97,7 @@ export function summarizeResponseArray(
   sortBy: SortBy = "label",
 ): [string[], number[]] {
   const labels = cleanupLabels(responses, heading, type, toStrip);
-  console.log(`Count of cleaned-up labels: ${labels.length}`);
+  // console.log(`Count of cleaned-up labels: ${labels.length}`);
   return alphabetizeCounts(labels, minCount, sortBy);
 }
 /**
@@ -174,11 +174,11 @@ export function alphabetizeCounts(
     }
   });
 
-  console.log(
-    `Return from alphabetize: Counts: ${labels.length} ${counts.length}\n
-      labels=${JSON.stringify(labels)}\n
-      counts=${JSON.stringify(counts)}`,
-  );
+  // console.log(
+  //   `Return from alphabetize: Counts: ${labels.length} ${counts.length}\n
+  //     labels=${JSON.stringify(labels)}\n
+  //     counts=${JSON.stringify(counts)}`,
+  // );
   return [labels, counts];
 }
 

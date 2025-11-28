@@ -9,6 +9,10 @@ import { questions } from "./data/questions";
 type QuestionType = "chart" | "responses" | "checkboxes";
 
 /**
+ * Utility functions for making questions and charts
+ */
+
+/**
  * makeAQuestion()
  * @param string - QuestionID
  * @param string - question type ("chart", "responses")
@@ -19,19 +23,21 @@ export function makeAQuestion(
   qType: QuestionType,
   qCount: number,
 ) {
+  console.log(`makeAQuestion: #${qNumber} ${qType} count: ${qCount}`);
   const listOfResponses = `
     <h3 id="q${qNumber}"></h3>
     <p><small><i>(<span id="ct${qNumber}"></span> responses)</i></small></p>
+    <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+      <table id="r${qNumber}t" class="table table-bordered table-striped mb-0"></table>
+    </div>
     `;
-  // <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
-  //       <table id="r${qNumber}" class="table table-bordered table-striped mb-0"></table>
-  //     </div>
 
   const listOfCharts = `
     <h3 id="q${qNumber}"></h3>
     <p><small><i>(<span id="ct${qNumber}"></span> responses)</i></small></p>
-    <div class="survey-block__charts"> </div>
+    <div class="survey-block__charts"></div>
     `;
+
   const surveyBlockChart = (subq: number) => `
     <div class="survey-block__chart">
       <div id="r${qNumber}-${subq}-title" class="survey-block__chart-title"></div>
@@ -40,11 +46,7 @@ export function makeAQuestion(
         <canvas id="r${qNumber}-${subq}"></canvas>
       </div>
     </div>
-`;
-  const surveyTextAnswers = (qNumber: number, subq: number) =>
-    `<div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
-    <table id="r${qNumber}-${subq}" class="table table-bordered table-striped mb-0"></table>
-  </div>`;
+    `;
 
   // responses get the "listOfResponses", charts get "listOfCharts"
   const replacementHTML =
@@ -55,6 +57,7 @@ export function makeAQuestion(
   }
   const block = document.createElement("div");
   block.className = "survey-block";
+  block.id = `r${qNumber}`;
   block.innerHTML = replacementHTML;
   home.appendChild(block);
   const chartContainer = block.querySelector(".survey-block__charts");
@@ -65,12 +68,7 @@ export function makeAQuestion(
       }
     }
   }
-  // append free-text responses to the question
-  if (qType === "checkboxes" || qType == "responses") {
-    const rBlock = document.createElement("div");
-    rBlock.innerHTML = surveyTextAnswers(qNumber, 2);
-    block.appendChild(rBlock);
-  }
+
   const qID = `q${qNumber}`;
   const questionHeading = document.getElementById(qID);
   if (questionHeading) {
@@ -82,8 +80,8 @@ export function makeAQuestion(
 
 /**
  * makeAChart() summarize the responses into the indicated <div> as a pie chart
- * @param {*} responses
- * @param {*} heading of the column to extract from the CSV
+ * @param {*} responseSet - the full set (array) of responses
+ * @param {*} heading of the column to extract from the set
  * @param {*} div to hold the data
  * @param {*} type of chart ("pie", "bar")
  * @param {*} title shown above the chart
@@ -92,13 +90,18 @@ export function makeAQuestion(
 export function makeAChart(
   responseSet: SurveyResponse[],
   heading: ResponseStringKey,
-  div: string,
+  div: string, // "r##-#"
   type: ChartDisplayType,
   title: string,
   toStrip = "",
   minCount = 0,
   sortBy: SortBy = "label",
 ) {
+  const surveyTextAnswers = (rID: string) =>
+    `<div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+      <table id="${rID}" class="table table-bordered table-striped mb-0"></table>
+    </div>`;
+
   const [labels, counts] = summarizeResponseArray(
     responseSet,
     heading,
@@ -118,14 +121,17 @@ export function makeAChart(
     heading,
     labels,
   );
-
-  if (type == "checkboxes") {
-    const otherResponses = filterResponsesByExclusions(
-      responseSet,
-      heading,
-      labels,
-    );
-    tableize(otherResponses, heading, `r${div}-2`);
+  if (otherResponses.length > 0) {
+    console.log(`otherResponses > 0: ${div} ${otherResponses.length} `);
+    // append free-text responses to the question
+    if (type === "checkboxes") {
+      const tBlock = document.createElement("div");
+      tBlock.innerHTML = surveyTextAnswers(`${div}t`); // creates "r#-#t"
+      const existing = document.getElementById(div);
+      const parent = existing?.parentElement;
+      parent!.appendChild(tBlock);
+    }
+    tableize(otherResponses, heading, `${div}-2`);
   }
 }
 
@@ -137,13 +143,35 @@ export function filterResponsesByExclusions(
   prop: ResponseStringKey,
   exclusions: string[],
 ): SurveyResponse[] {
-  if (!exclusions.length) {
-    return responses.slice();
+  if (!responses.length) {
+    return [];
   }
 
-  const exclusionSet = new Set(exclusions);
-  return responses.filter((response) => {
-    const value = response[prop] ?? "";
-    return !exclusionSet.has(value);
-  });
+  const exclusionSet = new Set(
+    exclusions.map((entry) => entry.trim()).filter((entry) => entry.length > 0),
+  );
+
+  return responses
+    .map((response) => {
+      const value = response[prop] ?? "";
+      if (!value) {
+        return null;
+      }
+
+      const filteredValues = value
+        .split(",")
+        .map((item) => item.trim())
+        .map((item) => item.replace(/\s*District$/i, "").trim())
+        .filter((item) => item.length > 0 && !exclusionSet.has(item));
+
+      if (!filteredValues.length) {
+        return null;
+      }
+
+      return {
+        ...response,
+        [prop]: filteredValues.join(", "),
+      };
+    })
+    .filter((response): response is SurveyResponse => response !== null);
 }
