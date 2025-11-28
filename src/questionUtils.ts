@@ -137,7 +137,7 @@ export function makeAChart(
         alert(`No parent for ${div}`);
       }
     }
-    tableize(otherResponses, heading, `${div}-2`);
+    tableize(otherResponses, heading, `${div}`);
   }
 }
 

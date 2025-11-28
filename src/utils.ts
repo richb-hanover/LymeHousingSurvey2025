@@ -47,7 +47,7 @@ export function tableize(
   }
 
   console.log(
-    `tabelize ${rID}: count: ${responses.length} prop: "${prop}" ${JSON.stringify(responses[0])}`,
+    `tableize ${rID}: count: ${responses.length} prop: "${prop}" ${JSON.stringify(responses[0])}`,
   );
   let markup = "";
 
