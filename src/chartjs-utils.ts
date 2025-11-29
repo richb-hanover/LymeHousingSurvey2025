@@ -107,7 +107,7 @@ export function makeChart(
             if (!total) {
               return "0%";
             }
-            const pct = ((value / total) * 100).toFixed(1);
+            const pct = ((value / total) * 100).toFixed(0);
             if (isPie) {
               const label = ctx.chart.data.labels?.[ctx.dataIndex] ?? "";
               return `${label}: ${pct}%`;

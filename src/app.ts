@@ -216,9 +216,9 @@ makeAQuestion(20, "responses", 1);
 tableize(responses, "20. Other thoughts", "r20");
 
 /**
- * Display the individual responses
+ * ... and ... Display the individual responses
  */
-const totalCountEl = document.getElementById("ct");
+const totalCountEl = document.getElementById("indivCt");
 if (totalCountEl) {
   totalCountEl.textContent = responses.length.toString();
 }
