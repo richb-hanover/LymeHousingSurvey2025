@@ -56,7 +56,8 @@ export function makeChart(
   if (!(canvas instanceof HTMLCanvasElement)) {
     throw new Error(`Chart container "${id}" not found`);
   }
-  const resolvedType: ChartType = type === "checkboxes" ? "bar" : type;
+  const isCheckboxes = type === "checkboxes";
+  const resolvedType: ChartType = isCheckboxes ? "bar" : type;
   const isPie = resolvedType === "pie";
 
   const config: ChartConfiguration<ChartType, number[], string> = {
@@ -67,6 +68,7 @@ export function makeChart(
         {
           data,
           backgroundColor: CHART_COLORS.slice(0, labels.length),
+          ...(isPie ? { radius: "70%" } : {}),
         },
       ],
     },
@@ -75,6 +77,7 @@ export function makeChart(
       maintainAspectRatio: false,
       plugins: {
         legend: {
+          display: !isPie,
           position: "right",
           align: "center",
           labels: {
@@ -102,6 +105,10 @@ export function makeChart(
               return "0%";
             }
             const pct = ((value / total) * 100).toFixed(1);
+            if (isPie) {
+              const label = ctx.chart.data.labels?.[ctx.dataIndex] ?? "";
+              return `${label}: ${pct}%`;
+            }
             return `${pct}%`;
           },
         },
@@ -111,12 +118,12 @@ export function makeChart(
         },
       },
       layout: {
-        padding: 0,
+        padding: isPie ? 20 : 0,
       },
     },
   };
 
-  if (type === "checkboxes" && config.options) {
+  if (isCheckboxes && config.options) {
     config.options.indexAxis = "y";
   }
 
