@@ -26,7 +26,7 @@ export function makeAQuestion(
   console.log(`makeAQuestion: ${qNumber} ${qType} count: ${qCount}`);
   const listOfResponses = `
     <h3 id="q${qNumber}"></h3>
-    <p><small><i>(<span id="ct${qNumber}"></span> responses)</i></small></p>
+    <p><small><i>(<span id="r${qNumber}ct"></span> responses)</i></small></p>
     <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
       <table id="r${qNumber}t" class="table table-bordered table-striped mb-0"></table>
     </div>
@@ -34,7 +34,7 @@ export function makeAQuestion(
 
   const listOfCharts = `
     <h3 id="q${qNumber}"></h3>
-    <p><small><i>(<span id="ct${qNumber}"></span> responses)</i></small></p>
+    <p><small><i>(<span id="r${qNumber}ct"></span> responses)</i></small></p>
     <div class="survey-block__charts"></div>
     `;
 
@@ -48,19 +48,21 @@ export function makeAQuestion(
     </div>
     `;
 
-  // responses get the "listOfResponses", charts get "listOfCharts"
-  const replacementHTML =
-    qType === "responses" ? listOfResponses : listOfCharts;
   const home = document.getElementById("home");
   if (!home) {
     throw new Error("Home container not found");
   }
-  // add the question body to the page
+  // responses get the "listOfResponses", charts get "listOfCharts"
+  const replacementHTML =
+    qType === "responses" ? listOfResponses : listOfCharts;
+
+  // create a <div> for the question body and add it to the page
   const block = document.createElement("div");
   block.className = "survey-block";
   block.id = `r${qNumber}`;
   block.innerHTML = replacementHTML;
   home.appendChild(block);
+
   // create all the charts needed
   const chartContainer = block.querySelector(".survey-block__charts");
   if ((qType === "chart" || qType === "checkboxes") && qCount > 0) {
@@ -123,14 +125,25 @@ export function makeAChart(
   const div = `r${rNumber}-${rSub}`;
   makeChart(div, type, labels, counts, title);
 
-  const ctDiv = `ct${rNumber}`;
+  const labelCounts = counts.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0,
+  );
+  const responses = responseSet.filter((item) =>
+    Object.prototype.hasOwnProperty.call(item, heading),
+  );
+  const responseCount = responses.length;
+
+  let totalCounts = labelCounts;
+  if (type === "checkboxes") {
+    totalCounts = responseCount;
+  }
+
+  const ctDiv = `r${rNumber}ct`;
   // if this is the first question, fill in the count
   if (rSub === 1) {
     const countEl = document.getElementById(ctDiv);
-    const totalCounts = counts.reduce(
-      (accumulator, currentValue) => accumulator + currentValue,
-      0,
-    );
+
     if (countEl) {
       countEl.innerHTML = String(totalCounts);
     }
