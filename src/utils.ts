@@ -137,12 +137,13 @@ export function cleanupLabels(
   });
 
   allResponses.forEach((item) => {
-    let val = item.replace(toStrip, "").trim();
+    let val = item.replace(toStrip, "");
+    val = val.trim();
     if (val) {
       labels.push(val);
     }
   });
-
+  // console.log(`cleanupLabels: ${JSON.stringify(labels, null, 2)}`);
   return labels;
 }
 
@@ -180,11 +181,11 @@ export function alphabetizeCounts(
     }
   });
 
-  // console.log(
-  //   `Return from alphabetize: Counts: ${labels.length} ${counts.length}\n
-  //     labels=${JSON.stringify(labels)}\n
-  //     counts=${JSON.stringify(counts)}`,
-  // );
+  console.log(
+    `Return from alphabetize: Counts: ${labels.length} ${counts.length}\n
+      labels=${JSON.stringify(labels)}\n
+      counts=${JSON.stringify(counts)}`,
+  );
   return [labels, counts];
 }
 

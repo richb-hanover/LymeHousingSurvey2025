@@ -56,6 +56,7 @@ export function makeChart(
   if (!(canvas instanceof HTMLCanvasElement)) {
     throw new Error(`Chart container "${id}" not found`);
   }
+  console.log(`makeChart: ${labels.length} ${data.length}`);
   const isCheckboxes = type === "checkboxes";
   const resolvedType: ChartType = isCheckboxes ? "bar" : type;
   const isPie = resolvedType === "pie";
@@ -66,6 +67,8 @@ export function makeChart(
       labels,
       datasets: [
         {
+          // label: title ?? "Responses",
+
           data,
           backgroundColor: CHART_COLORS.slice(0, labels.length),
           ...(isPie ? { radius: "70%" } : {}),
@@ -77,7 +80,7 @@ export function makeChart(
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: !isPie,
+          display: false,
           position: "right",
           align: "center",
           labels: {
