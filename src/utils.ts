@@ -69,6 +69,7 @@ export function tableize(
         (entry) => `${entry.resp} <i>(Answer #${entry.item.toString()})</i>`,
       );
 
+    console.log(`tabelize of count: ${rID}, "ct${rID}"`);
     const countEl = document.getElementById(`ct${rID}`);
     if (countEl) {
       countEl.textContent = formattedResponses.length.toString();

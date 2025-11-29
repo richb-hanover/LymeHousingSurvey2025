@@ -98,7 +98,10 @@ export function makeAChart(
   sortBy: SortBy = "label",
 ) {
   const surveyTextAnswers = (rID: string) =>
-    `<div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
+    `<h5>Other responses to this question:</h5> <br /> 
+      <p><small><i>(<span id="{rID}-ct"></span> responses)</i></small></p>
+
+    <div class="col-10 table-wrapper-scroll-y my-custom-scrollbar">
       <table id="${rID}" class="table table-bordered table-striped mb-0"></table>
     </div>`;
 
@@ -130,7 +133,8 @@ export function makeAChart(
       const tBlock = document.createElement("div");
       tBlock.innerHTML = surveyTextAnswers(`${div}t`); // creates "r#-#t"
       const existing = document.getElementById(div);
-      const parent = existing?.parentElement?.parentElement;
+      const parent =
+        existing?.parentElement?.parentElement?.parentElement?.parentElement;
       try {
         parent!.appendChild(tBlock);
       } catch {

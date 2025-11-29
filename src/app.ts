@@ -220,17 +220,17 @@ tableize(responses, "20. Other thoughts", "r20");
 /**
  * Beginning of main routine for the individual responses
  */
-const totalCountEl = document.getElementById("ct");
-if (totalCountEl) {
-  totalCountEl.textContent = responses.length.toString();
-}
+// const totalCountEl = document.getElementById("ct");
+// if (totalCountEl) {
+//   totalCountEl.textContent = responses.length.toString();
+// }
 
-const tbody = responses
-  .map((response) => formatIndividualResponse(response))
-  .map((markup) => `<tr><td>${markup}</td></tr>`)
-  .join("");
+// const tbody = responses
+//   .map((response) => formatIndividualResponse(response))
+//   .map((markup) => `<tr><td>${markup}</td></tr>`)
+//   .join("");
 
-const responsesTable = document.getElementById("resps");
-if (responsesTable) {
-  responsesTable.innerHTML = `<tbody>${tbody}</tbody>`;
-}
+// const responsesTable = document.getElementById("resps");
+// if (responsesTable) {
+//   responsesTable.innerHTML = `<tbody>${tbody}</tbody>`;
+// }
