@@ -5,7 +5,7 @@ import { tableize, formatIndividualResponse } from "./utils";
 import { makeAQuestion, makeAChart } from "./questionUtils";
 import { responses } from "./data/responses";
 /**
- * THE GOOD STUFF...
+ * Display the question summaries
  */
 
 // Question 1
@@ -216,19 +216,19 @@ makeAQuestion(20, "responses", 1);
 tableize(responses, "20. Other thoughts", "r20");
 
 /**
- * Beginning of main routine for the individual responses
+ * Display the individual responses
  */
-// const totalCountEl = document.getElementById("ct");
-// if (totalCountEl) {
-//   totalCountEl.textContent = responses.length.toString();
-// }
+const totalCountEl = document.getElementById("ct");
+if (totalCountEl) {
+  totalCountEl.textContent = responses.length.toString();
+}
 
-// const tbody = responses
-//   .map((response) => formatIndividualResponse(response))
-//   .map((markup) => `<tr><td>${markup}</td></tr>`)
-//   .join("");
+const tbody = responses
+  .map((response) => formatIndividualResponse(response))
+  .map((markup) => `<tr><td>${markup}</td></tr>`)
+  .join("");
 
-// const responsesTable = document.getElementById("resps");
-// if (responsesTable) {
-//   responsesTable.innerHTML = `<tbody>${tbody}</tbody>`;
-// }
+const responsesTable = document.getElementById("resps");
+if (responsesTable) {
+  responsesTable.innerHTML = `<tbody>${tbody}</tbody>`;
+}

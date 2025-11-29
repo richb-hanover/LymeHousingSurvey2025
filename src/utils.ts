@@ -5,14 +5,14 @@
 import type { SurveyResponse, ResponseStringKey } from "./data/responseTypes";
 import { makeChart, type ChartDisplayType } from "./chartjs-utils";
 
-// const satisfactionLabels = [
-//   "<i>No entry</i>",
-//   "Very unsatisfied",
-//   "Unsatisfied",
-//   "Neutral",
-//   "Satisfied",
-//   "Very satisfied",
-// ] as const;
+const satisfactionLabels = [
+  "<i>No entry</i>",
+  "Very unsatisfied",
+  "Unsatisfied",
+  "Neutral",
+  "Satisfied",
+  "Very satisfied",
+] as const;
 
 export type SortBy = "label" | "value";
 type ResponseCount = Record<string, number>;
@@ -396,8 +396,8 @@ export function formatIndividualResponse(resp: SurveyResponse): string {
       <li>Wherever Single Family: ${read("5. Wherever SF units")}
       <li>Nowhere: ${read("5. Nowhere")}
       </ul>`;
-  retstr += `<dt>Other locations:</dt> <dd>${read("6. Other explanation")}	</dd>`;
-  retstr += `<dt>Housing in Commercial District:</dt>  <dd>${read(
+  retstr += `<b>Other locations:</b> ${read("6. Other explanation")}`;
+  retstr += `<dt>Types of housing in Commercial District:</dt>  <dd>${read(
     "7. Housing in Commercial",
   )}</dd>`;
   retstr += `<dt>Appropriate districts/locations for multi-unit housing:</dt>  
